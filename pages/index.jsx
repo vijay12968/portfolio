@@ -1,43 +1,55 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-// Above-the-fold: Load immediately for fast FCP
+// Above-the-fold: load immediately
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import Profile from '../components/Profile';
 import Footer from '../components/Footer';
 
-// Below-the-fold: Lazy load to reduce initial bundle
+// Below-the-fold: lazy load
 const Projects = dynamic(() => import('../components/Projects'), {
-  loading: () => <div className="min-h-screen flex items-center justify-center bg-white"><p className="text-gray-500">Loading projects...</p></div>,
+  loading: () => <div className="py-28 flex items-center justify-center" style={{ background: '#fafafa' }}><div className="w-6 h-6 border-2 rounded-full animate-spin" style={{ borderColor: 'var(--sage-light)', borderTopColor: 'var(--sage)' }} /></div>,
   ssr: true,
 });
-
 const Skills = dynamic(() => import('../components/Skills'), {
-  loading: () => <div className="min-h-screen flex items-center justify-center bg-gray-50"><p className="text-gray-500">Loading skills...</p></div>,
+  loading: () => <div className="py-28 flex items-center justify-center" style={{ background: '#f5f1ed' }}><div className="w-6 h-6 border-2 rounded-full animate-spin" style={{ borderColor: 'var(--sage-light)', borderTopColor: 'var(--sage)' }} /></div>,
   ssr: true,
 });
-
-const Testimonial = dynamic(() => import('../components/Testimonial'), {
-  loading: () => <div className="min-h-screen flex items-center justify-center bg-white"><p className="text-gray-500">Loading...</p></div>,
+const Experience = dynamic(() => import('../components/Experience'), {
+  loading: () => <div className="py-28" style={{ background: '#fafafa' }} />,
   ssr: true,
 });
-
+const Resume = dynamic(() => import('../components/Resume'), {
+  loading: () => <div className="py-28" style={{ background: '#f5f1ed' }} />,
+  ssr: true,
+});
+const Education = dynamic(() => import('../components/Education'), {
+  loading: () => <div className="py-28" style={{ background: '#fafafa' }} />,
+  ssr: true,
+});
+const Certifications = dynamic(() => import('../components/Certifications'), {
+  loading: () => <div className="py-28" style={{ background: '#f5f1ed' }} />,
+  ssr: true,
+});
 const Contact = dynamic(() => import('../components/Contact'), {
-  loading: () => <div className="min-h-screen flex items-center justify-center bg-gray-50"><p className="text-gray-500">Loading contact...</p></div>,
+  loading: () => <div className="py-28" style={{ background: '#f0ebe3' }} />,
   ssr: true,
 });
 
 export default function Home() {
   return (
-    <div className="bg-white text-black overflow-x-hidden" style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
+    <div style={{ fontFamily: 'Inter, system-ui, sans-serif', overflowX: 'hidden' }}>
       <Navigation />
       <main>
         <Hero />
         <Profile />
         <Projects />
         <Skills />
-        <Testimonial />
+        <Experience />
+        <Resume />
+        <Education />
+        <Certifications />
         <Contact />
       </main>
       <Footer />

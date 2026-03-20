@@ -1,47 +1,140 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+function useInView(threshold = 0.2) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold }
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return [ref, inView];
+}
 
 export default function Profile() {
+  const [ref, inView] = useInView(0.15);
+
   return (
-    <section id="about" className="py-20 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-black mb-16 text-center" style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
-          About Me
+    <section
+      id="about"
+      className="py-28 px-6"
+      style={{ background: 'linear-gradient(135deg, #f5f1ed 0%, #fafafa 100%)' }}
+    >
+      <div className="max-w-6xl mx-auto" ref={ref}>
+        {/* Section label */}
+        <div className={`mb-4 transition-all duration-600 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <span className="section-label">About</span>
+        </div>
+        <h2
+          className={`section-heading mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          style={{ transitionDelay: '100ms' }}
+        >
+          Passionate about building<br />
+          <span style={{ color: 'var(--sage)' }}>robust data systems</span>
         </h2>
 
-        {/* Two Column Grid */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Text Content */}
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-4">
-              Data Engineer & Student
-            </h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              I'm Veeraj Thota, a 6th semester B.Tech CSE student at GRIET Hyderabad with a strong focus on data engineering and emerging technologies.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Currently working as a Project Intern at BytesEdge (Jan 2026 - Present) and serving as Operations Lead (Aug 2025 - Present). My passion lies in building scalable data systems, working with Python, SQL, and modern cloud infrastructure.
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              My technical expertise spans across data engineering tools (Apache Spark, Pandas), databases (PostgreSQL, MongoDB), cloud platforms (AWS, Docker), and programming languages (Python, SQL, Scala, Java).
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              I'm actively seeking opportunities in FinTech companies where I can apply my data engineering skills to build robust, scalable systems that process and analyze data at scale.
-            </p>
-          </div>
+        <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Right: Profile Photo */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-md">
+          {/* Left: Photo */}
+          <div
+            className={`flex justify-center transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+            style={{ transitionDelay: '200ms' }}
+          >
+            <div className="relative">
+              <div
+                className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl"
+                style={{ background: 'var(--sage-light)', opacity: 0.4 }}
+              />
               <img
                 src="/self.jpeg"
                 alt="Veeraj Thota"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="relative z-10 rounded-2xl w-full max-w-sm object-cover"
+                style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.12)' }}
                 onError={(e) => {
                   e.target.style.display = 'none';
-                  e.target.parentElement.innerHTML = '<div class="w-full aspect-square bg-gray-200 rounded-lg flex items-center justify-center"><span class="text-gray-400">Profile Photo</span></div>';
+                  e.target.parentElement.innerHTML +=
+                    '<div class="relative z-10 rounded-2xl w-full max-w-sm aspect-square flex items-center justify-center" style="background:linear-gradient(135deg,#d1dcc8,#e8ede4)"><span style="color:#6a7d5e">Veeraj Thota</span></div>';
                 }}
               />
+            </div>
+          </div>
+
+          {/* Right: Text */}
+          <div className="space-y-5">
+            {[
+              {
+                delay: '300ms',
+                content: (
+                  <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                    I'm Veeraj Thota, a 6th semester B.Tech CSE student at <strong style={{ color: 'var(--charcoal)' }}>GRIET Hyderabad</strong> with
+                    a strong focus on data engineering and emerging technologies.
+                  </p>
+                ),
+              },
+              {
+                delay: '400ms',
+                content: (
+                  <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                    Currently working as a <strong style={{ color: 'var(--charcoal)' }}>Project Intern at BytesEdge</strong> (Jan 2026 – Present)
+                    and serving as Operations Lead. My passion lies in building scalable data
+                    systems using Python, SQL, and modern cloud infrastructure.
+                  </p>
+                ),
+              },
+              {
+                delay: '500ms',
+                content: (
+                  <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                    My expertise spans Apache Spark, Pandas, PostgreSQL, MongoDB, AWS, and Docker.
+                    Whether it's building ETL pipelines, optimizing database queries, or deploying
+                    ML models — I engineer solutions that stand the test of scale.
+                  </p>
+                ),
+              },
+              {
+                delay: '600ms',
+                content: (
+                  <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                    Actively seeking opportunities in <strong style={{ color: 'var(--charcoal)' }}>FinTech</strong> where I can apply my
+                    data engineering skills to build robust, scalable systems.
+                  </p>
+                ),
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: item.delay }}
+              >
+                {item.content}
+              </div>
+            ))}
+
+            {/* Stats */}
+            <div
+              className={`grid grid-cols-3 gap-6 pt-6 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              style={{
+                transitionDelay: '700ms',
+                borderTop: '1px solid rgba(139,158,126,0.2)',
+              }}
+            >
+              {[
+                { value: '2+', label: 'Years Coding' },
+                { value: '15+', label: 'Projects' },
+                { value: '5+', label: 'Tech Stacks' },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-2xl font-semibold" style={{ color: 'var(--charcoal)' }}>
+                    {stat.value}
+                  </div>
+                  <div className="text-xs mt-1 font-medium" style={{ color: 'var(--sage)', letterSpacing: '0.05em' }}>
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
