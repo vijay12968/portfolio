@@ -69,7 +69,7 @@ export default function Profile() {
                 delay: '300ms',
                 content: (
                   <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                    I'm Veeraj Thota, a 6th semester B.Tech CSE student at <strong style={{ color: 'var(--charcoal)' }}>GRIET Hyderabad</strong> with
+                    I'm Veeraj Thota, a 3rd-year B.Tech CSE student at <strong style={{ color: 'var(--charcoal)' }}>GRIET Hyderabad</strong> with
                     a strong focus on data engineering and emerging technologies.
                   </p>
                 ),
@@ -78,7 +78,7 @@ export default function Profile() {
                 delay: '400ms',
                 content: (
                   <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                    Currently working as a <strong style={{ color: 'var(--charcoal)' }}>Project Intern at BytesEdge</strong> (Jan 2026 – Present)
+                    Recently completed an internship at <strong style={{ color: 'var(--charcoal)' }}>BytesEdge</strong> (Jan – Mar 2026)
                     and serving as Operations Lead. My passion lies in building scalable data
                     systems using Python, SQL, and modern cloud infrastructure.
                   </p>

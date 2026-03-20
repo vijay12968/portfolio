@@ -31,11 +31,11 @@ const education = [
     institution: 'Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)',
     location: 'Hyderabad, India',
     period: '2023 – 2027',
-    highlight: '2nd Year · CGPA 7.7 / 10.0',
+    highlight: '3rd Year · CGPA 7.7 / 10.0',
     note: null,
     stats: [
       { label: 'CGPA',      value: '7.7 / 10' },
-      { label: 'Year',      value: '2nd' },
+      { label: 'Year',      value: '3rd' },
       { label: 'Program',   value: 'B.Tech CSE' },
     ],
     coursework,

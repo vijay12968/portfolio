@@ -77,107 +77,67 @@ const experiences = [
     tools: [],
   },
   {
-    role: 'Project Intern — Data Engineering & ML',
+    role: 'Project Intern — Design, Development & Digital Marketing',
     org: 'BytesEdge',
-    period: 'January 2026 – Present',
+    period: 'January 2026 – March 2026',
+    periodNote: '3 months · Completed',
     location: 'Hyderabad, India',
     type: 'Internship',
     description:
-      'Working on data engineering and ML pipeline development in a production environment. Contributed to ETL systems, database management, ML model integration, and API development. Gained cross-functional exposure to design and web development workflows in an agile team.',
+      'Worked primarily across design, development, and digital marketing functions, contributing to tasks that supported real product and campaign workflows. Assisted in creating and reviewing UI/UX designs, developing functional website components, and planning digital marketing strategies focused on user engagement and visibility. Collaborated with team members to analyze project requirements, test usability, and refine solutions based on feedback. This role strengthened my practical understanding of how technical development, visual design, and marketing strategy integrate to build and launch effective digital products in a professional environment.',
     responsibilities: [
       {
-        title: 'Data Engineering & ETL',
-        icon: (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-          </svg>
-        ),
-        items: [
-          'Designed and implemented production ETL pipelines',
-          'Built data transformation and workflow orchestration',
-          'Optimized data quality and validation processes',
-          'End-to-end: ingestion → transformation → storage',
-        ],
-      },
-      {
-        title: 'Database Management',
-        icon: (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-        ),
-        items: [
-          'PostgreSQL: schema design, indexing, query optimization',
-          'MongoDB: document modeling and flexible schemas',
-          'Data migrations and schema versioning',
-          'Performance tuning for large-scale datasets',
-        ],
-      },
-      {
-        title: 'ML Model Integration',
-        icon: (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-          </svg>
-        ),
-        items: [
-          'Implemented ML inference pipelines in production',
-          'Model serving and performance monitoring',
-          'Backend integration of ML predictions',
-          'Contributed to model optimization workflows',
-        ],
-      },
-      {
-        title: 'API Development & Tooling',
-        icon: (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        ),
-        items: [
-          'Built FastAPI REST services for internal tooling',
-          'Code reviews and best practices participation',
-          'API documentation and specification writing',
-          'Built utilities and helper functions for team',
-        ],
-      },
-      {
-        title: 'Design & Digital Marketing',
+        title: 'Design & UI/UX Development',
         icon: (
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
         ),
         items: [
-          'Adobe Photoshop design fundamentals',
-          'UI/UX principles and design workflow',
-          'Digital marketing basics and web presence',
-          'Cross-functional collaboration with design team',
+          'Created and reviewed UI/UX designs for digital products',
+          'Applied UI/UX principles and design system best practices',
+          'Adobe Photoshop and design workflow experience',
+          'Tested usability and refined designs based on feedback',
         ],
       },
       {
-        title: 'Web Dev & Collaboration',
+        title: 'Web Development & Digital Presence',
         icon: (
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
           </svg>
         ),
         items: [
-          'Built calendar app as collaborative team project',
-          'Git workflow and version control best practices',
-          'Agile sprint planning and code collaboration',
-          'Web development workflow experience',
+          'Developed functional website components for digital products',
+          'Built responsive and accessible web solutions',
+          'Collaborated on product launch workflows',
+          'Git version control and team code collaboration',
+        ],
+      },
+      {
+        title: 'Digital Marketing & Strategy',
+        icon: (
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+          </svg>
+        ),
+        items: [
+          'Planned digital marketing strategies for user engagement',
+          'Supported campaign workflows and visibility optimization',
+          'Analyzed project requirements with cross-functional team',
+          'Contributed to building and launching digital products',
         ],
       },
     ],
     achievements: [
-      { metric: '3 Features',       desc: 'Production-ready data pipeline features delivered' },
-      { metric: 'PostgreSQL + MongoDB', desc: 'Hands-on with both relational and NoSQL databases' },
-      { metric: 'FastAPI Services', desc: 'REST APIs built for internal tooling' },
-      { metric: 'Cross-functional', desc: 'Design, web dev, and agile workflow exposure' },
+      { metric: 'UI/UX Designs',      desc: 'Assisted in creating and reviewing designs for digital products' },
+      { metric: 'Web Components',      desc: 'Developed functional components for web applications' },
+      { metric: 'Marketing Strategy',  desc: 'Participated in planning for user engagement and visibility' },
+      { metric: 'Cross-functional',    desc: 'Analyzed requirements, tested usability, refined with team' },
     ],
-    impact: 'Direct contribution to production systems with real-world data engineering challenges. Gained practical experience in building scalable data infrastructure and integrating ML models into backend systems.',
-    tools: ['Python', 'SQL', 'PostgreSQL', 'MongoDB', 'FastAPI', 'Git', 'Adobe Photoshop'],
+    impact: 'Strengthened practical understanding of how technical development, visual design, and marketing strategy integrate to build and launch effective digital products in a professional environment.',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Adobe Photoshop', 'Git', 'UI/UX Design', 'Digital Marketing'],
   },
 ];
 
@@ -278,6 +238,14 @@ function ExperienceCard({ exp, index, inView }) {
               <span className="text-xs font-medium" style={{ color: 'var(--text-secondary)' }}>
                 {exp.period}
               </span>
+              {exp.periodNote && (
+                <span
+                  className="text-xs px-2 py-0.5 rounded-full font-semibold"
+                  style={{ background: 'rgba(139,158,126,0.1)', color: 'var(--sage-dark)' }}
+                >
+                  {exp.periodNote}
+                </span>
+              )}
             </div>
           </div>
 

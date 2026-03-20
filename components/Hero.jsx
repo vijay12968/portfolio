@@ -98,7 +98,7 @@ export default function Hero() {
               style={{ transitionDelay: '500ms' }}
             >
               <p className="leading-relaxed" style={{ color: 'var(--text-secondary)', maxWidth: '480px' }}>
-                2nd-year B.Tech CSE student at GRIET, passionate about data engineering, machine learning,
+                3rd-year B.Tech CSE student at GRIET, passionate about data engineering, machine learning,
                 and scalable infrastructure. CSI Operations Lead with hands-on experience in ETL pipelines,
                 ML model deployment, and cloud infrastructure.
               </p>
