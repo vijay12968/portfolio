@@ -1,80 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const skillCategories = [
+const skillsData = [
   {
-    category: 'DATA ENGINEERING',
-    items: ['Python', 'SQL', 'ETL Pipelines', 'Data Architecture', 'RDBMS', 'Distributed Systems'],
-    neon: 'cyan'
+    category: 'Languages & Core',
+    skills: ['Python', 'SQL', 'Scala', 'Java', 'JavaScript', 'TypeScript']
   },
   {
-    category: 'MACHINE LEARNING',
-    items: ['Scikit-Learn', 'Pandas', 'NumPy', 'FAISS', 'Model Optimization', 'Feature Engineering'],
-    neon: 'pink'
+    category: 'Data Tools & Frameworks',
+    skills: ['Apache Spark', 'Pandas', 'ETL Pipelines', 'FastAPI', 'Streamlit', 'NumPy']
   },
   {
-    category: 'SYSTEMS & TOOLS',
-    items: ['Streamlit', 'MongoDB', 'Git', 'Docker', 'APIs', 'Visualization'],
-    neon: 'cyan'
-  },
-  {
-    category: 'LEADERSHIP',
-    items: ['Team Coordination', 'Problem Solving', 'Communication', 'Innovation', 'Strategy', 'Execution'],
-    neon: 'pink'
+    category: 'Databases & Cloud',
+    skills: ['PostgreSQL', 'MongoDB', 'Docker', 'AWS', 'Git', 'Linux']
   }
 ];
 
 export default function Skills() {
-  const [animateSkills, setAnimateSkills] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setAnimateSkills(true);
-      }
-    }, { threshold: 0.1 });
-
-    const element = document.getElementById('skills-section');
-    if (element) observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="arsenal" className="py-32 px-6 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 grid-bg"></div>
+    <section id="skills" className="py-20 px-6 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Title */}
+        <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 text-center" style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
+          Skills & Technologies
+        </h2>
+        <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+          Core competencies in data engineering, cloud infrastructure, and software development
+        </p>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div id="skills-section" className="mb-20 text-center space-y-4">
-          <p className="text-pink-500 font-mono text-sm tracking-widest uppercase animate-fade-in-up">Capabilities</p>
-          <h2 className="text-6xl md:text-7xl font-serif font-black text-white leading-tight animate-fade-in-up stagger-1">
-            TECHNICAL
-            <br />
-            <span className="neon-glow-cyan">ARSENAL</span>
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skillCategories.map((category, idx) => (
-            <div
-              key={idx}
-              className={`group bg-black/40 border transition-all duration-300 p-8 rounded-lg backdrop-blur-sm transform hover:-translate-y-2 ${
-                category.neon === 'cyan'
-                  ? 'border-cyan-500/30 hover:border-cyan-500 hover:bg-cyan-500/5'
-                  : 'border-pink-600/30 hover:border-pink-600 hover:bg-pink-600/5'
-              } ${animateSkills ? `animate-fade-in-up stagger-${idx}` : 'opacity-0'}`}
-            >
-              <p className={`font-mono text-xs tracking-widest mb-6 uppercase ${category.neon === 'cyan' ? 'text-cyan-400' : 'text-pink-500'}`}>
+        {/* Skills Grid - Three Columns */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {skillsData.map((category, idx) => (
+            <div key={idx} className="bg-white border border-gray-200 p-6">
+              {/* Category Title */}
+              <h3 className="text-xl font-bold text-black mb-4 pb-3 border-b border-gray-200">
                 {category.category}
-              </p>
+              </h3>
 
-              <div className="space-y-3">
-                {category.items.map((item, i) => (
-                  <div key={i} className={`flex items-center gap-3 text-gray-300 text-sm group-hover:text-white transition transform hover:translate-x-1 ${animateSkills ? `animate-fade-in-up stagger-${i}` : 'opacity-0'}`}>
-                    <span className={category.neon === 'cyan' ? 'text-cyan-400' : 'text-pink-500'}>◆</span>
-                    <span>{item}</span>
-                  </div>
+              {/* Skills List */}
+              <ul className="space-y-2">
+                {category.skills.map((skill, i) => (
+                  <li key={i} className="flex items-center text-gray-700">
+                    <span className="w-2 h-2 bg-black mr-3"></span>
+                    {skill}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veeraj Thota - AI/ML Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header/Navigation */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #222;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 4rem 2rem;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.1rem;
+            color: #777;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: 1px solid #222;
+            background: #222;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #000;
+            border-color: #000;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #222;
+            border-color: #222;
+        }
+
+        .btn-outline:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: #ffffff;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image-real {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 2rem;
+            background: #f9f9f9;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .projects-header h2 {
+            font-size: 2.2rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .view-all {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .view-all:hover {
+            color: #000;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+            display: block;
+        }
+
+        .project-card:hover {
+            border-color: #999;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: #f0f0f0;
+            display: none;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            color: #555;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            border-radius: 3px;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 5rem 2rem;
+            background: #ffffff;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .skill-category-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            color: #666;
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Testimonial Section */
+        .testimonial {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .testimonial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .testimonial-image {
+            display: none;
+        }
+
+        .testimonial-container img {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .testimonial-text h3 {
+            font-size: 1.8rem;
+            color: #000;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .testimonial-text p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .contact-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            padding: 0.75rem 2rem;
+            border: 1px solid #222;
+            background: transparent;
+            color: #222;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .contact-link:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .social-links a:hover {
+            color: #000;
+        }
+
+        .footer-text {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 300px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .testimonial-container img {
+                width: 100%;
+                max-width: 100%;
+                height: 300px;
+            }
+
+            .projects-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">VEERAJ THOTA</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Data Engineer</h1>
+                <p class="subtitle">Student working on emerging tech</p>
+                <p>Building intelligent data systems that drive real-world impact in fintech and sustainability. Passionate about exploring how data engineering and machine learning can create meaningful change across all sectors and communities.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn">Get In Touch</a>
+                    <a href="https://github.com/vijay12968" target="_blank" class="btn btn-outline">View GitHub</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Hackathons</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">7.7</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" style="background: transparent; border: none;"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a 2nd-year B.Tech CSE student at GRIET, Hyderabad, with a strong passion for Data Engineering and emerging technologies. Currently exploring data pipelines, ETL systems, and big data technologies.</p>
+                    <p>As a hackathon builder and team lead for the Adobe Hackathon, I work on building scalable data systems and processing architectures. My focus is on creating robust data infrastructure that supports AI/ML systems and drives business insights.</p>
+                    <p>I'm actively seeking internship opportunities in Data Engineering roles, particularly in fintech organizations. I'm interested in designing data platforms, optimizing data pipelines, and building systems that power intelligent applications.</p>
+                </div>
+                <img src="self.jpeg" alt="Veeraj Thota" class="about-image-real">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h2>Featured Projects</h2>
+                <a href="#" class="view-all">View all →</a>
+            </div>
+            <div class="projects-grid">
+                <a href="https://github.com/vijay12968" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Adobe Hackathon</h3>
+                        <p class="project-description">PDF Intelligence Pipeline with TF-IDF, semantic scoring, and multilingual support. Deployed as offline Docker solution.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TF-IDF</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/vijay12968" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">AgriConnect</h3>
+                        <p class="project-description">Smart Crop Planner dashboard with weather prediction, rainfall analysis, and soil health insights for farmers.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">ML Models</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/vijay12968" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+                    <div class="project-image"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Re Carma</h3>
+                        <p class="project-description">Multi-role ELV Recycling Platform with admin dashboards, pricing engine, and real-time analytics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Portal</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="skills-container">
+            <h2 class="section-title">Technical Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Languages & Core</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Scala</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Data Tools & Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>Apache Spark</li>
+                        <li>Pandas & NumPy</li>
+                        <li>ETL Pipelines</li>
+                        <li>FastAPI</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Databases & Cloud</h3>
+                    <ul class="skill-list">
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Docker</li>
+                        <li>AWS / Cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="testimonial-container">
+            <img src="self.jpeg" alt="Veeraj Thota">
+            <div class="testimonial-text">
+                <h3>Building scalable data systems for the future.</h3>
+                <p>I'm a student with a deep interest in data engineering, ETL systems, and how data infrastructure powers intelligent applications. I believe in the transformative power of well-engineered data pipelines when applied thoughtfully to solve real-world problems.</p>
+                <p>My goal is to become a Data Engineer in the fintech sector, focusing on building robust data platforms that support business intelligence and ML systems. Currently exploring data technologies, open-source contributions, and real-world projects to build expertise.</p>
+                <div class="testimonial-author">— Veeraj Thota, GRIET Hyderabad</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Let's Connect</h2>
+            <p class="contact-description">Interested in collaborations, internships, or discussing AI, fintech, and emerging tech? I'd love to hear from you.</p>
+            <div class="contact-links">
+                <a href="mailto:tveeraj311@gmail.com" class="contact-link">Send Email</a>
+                <a href="https://www.linkedin.com/in/veeraj-thota-9463a1290" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="https://github.com/vijay12968" target="_blank" class="contact-link">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/vijay12968" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/veeraj-thota-9463a1290" target="_blank">LinkedIn</a>
+                <a href="mailto:tveeraj311@gmail.com">Email</a>
+            </div>
+            <p class="footer-text">© 2026 Veeraj Thota. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
