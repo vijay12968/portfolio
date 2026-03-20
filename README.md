@@ -6,7 +6,7 @@
 [![Lighthouse](https://img.shields.io/badge/lighthouse-90%2B-success)](PERFORMANCE.md)
 [![Security](https://img.shields.io/badge/security-10%2F10-success)](SECURITY.md)
 
-**Live Site:** [veerajthota.com](https://veerajthota.com) *(coming soon)*
+**Live Site:** [portfolio-sandy-two-27.vercel.app](https://portfolio-sandy-two-27.vercel.app/) ✅ **LIVE!**
 
 ---
 
