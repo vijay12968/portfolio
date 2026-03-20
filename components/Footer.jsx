@@ -32,7 +32,8 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <a href="https://github.com/vijay12968" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-black transition">GitHub</a>
               <a href="https://linkedin.com/in/veeraj-thota-9463a1290" target="_blank" rel="noopener noreferrer" className="block text-gray-600 hover:text-black transition">LinkedIn</a>
-              <a href="mailto:veerajthota42@gmail.com" className="block text-gray-600 hover:text-black transition">Email</a>
+              <a href="mailto:tveeraj311@gmail.com" className="block text-gray-600 hover:text-black transition">Email</a>
+              <a href="tel:+918688301917" className="block text-gray-600 hover:text-black transition">Phone</a>
             </div>
           </div>
         </div>
