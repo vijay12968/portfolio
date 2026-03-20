@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 export default function Contact() {
   const [showPhone, setShowPhone] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
 
   return (
     <section id="contact" className="py-20 px-6 bg-gray-50">
@@ -19,12 +20,12 @@ export default function Contact() {
 
         {/* Contact Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:tveeraj311@gmail.com"
+          <button
+            onClick={() => setShowEmail(!showEmail)}
             className="px-8 py-3 bg-black text-white font-medium transition-all duration-300 hover:bg-gray-800"
           >
-            Email
-          </a>
+            {showEmail ? 'tveeraj311@gmail.com' : 'Email'}
+          </button>
           <button
             onClick={() => setShowPhone(!showPhone)}
             className="px-8 py-3 bg-transparent border-2 border-black text-black font-medium transition-all duration-300 hover:bg-black hover:text-white"
