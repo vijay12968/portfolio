@@ -1,0 +1,186 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Daily data refresh at 00:00 UTC
+    - cron: '0 0 * * *'
+
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests (when available)
+        run: echo "Tests will be added in Phase 6" # npm run test -- --coverage
+
+      # Future: Upload coverage to Codecov
+      # - name: Upload coverage
+      #   uses: codecov/codecov-action@v3
+
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        run: npm audit --production --audit-level=moderate
+
+      - name: Check for secrets in code
+        run: |
+          echo "Checking for hardcoded secrets..."
+          if grep -r "ghp_" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next .; then
+            echo "Found potential GitHub token in code!"
+            exit 1
+          fi
+          if grep -r "AKIA" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next .; then
+            echo "Found potential AWS key in code!"
+            exit 1
+          fi
+          echo "No hardcoded secrets found."
+
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+    needs: [lint, test, security]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: vijay12968
+
+      - name: Check bundle size
+        run: |
+          echo "Checking bundle size..."
+          if [ -d ".next/static/chunks" ]; then
+            MAIN_BUNDLE=$(find .next/static/chunks -name "main-*.js" -exec ls -lh {} \; | awk '{print $5}')
+            echo "Main bundle size: $MAIN_BUNDLE"
+            echo "Target: <100KB"
+          fi
+
+  refresh-data:
+    name: Refresh Portfolio Data
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh GitHub data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: vijay12968
+        run: |
+          echo "Refreshing GitHub data..."
+          # Call API to refresh cache
+          npm run build
+          # This will pre-populate the cache during build
+
+      - name: Commit cache updates
+        run: |
+          git config user.email "bot@veerajthota.com"
+          git config user.name "Portfolio Bot"
+          git add .cache/
+          git diff --staged --quiet || git commit -m "chore: auto-refresh portfolio data [skip ci]"
+          git push || echo "No changes to push"
+
+  deploy:
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    needs: [lint, test, security, build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Vercel
+        run: |
+          echo "Deployment happens automatically via Vercel GitHub integration"
+          echo "If using Vercel CLI, uncomment below:"
+          # npm install -g vercel
+          # vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+
+  notify:
+    name: Notify Build Status
+    runs-on: ubuntu-latest
+    needs: [lint, test, security, build]
+    if: always()
+    steps:
+      - name: Check build status
+        run: |
+          if [ "${{ needs.build.result }}" == "success" ]; then
+            echo "✅ Build successful"
+          else
+            echo "❌ Build failed"
+            exit 1
+          fi

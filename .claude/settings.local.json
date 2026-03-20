@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(py:*)",
+      "Bash(wc -l \"C:\\\\Users\\\\Veeraj\\\\OneDrive\\\\Desktop\\\\portfolio\\\\components\"/*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(wc -l /c/Users/Veeraj/OneDrive/Desktop/portfolio/components/*.jsx)",
+      "Bash(grep:*)",
+      "Bash(find /c/Users/Veeraj/OneDrive/Desktop/portfolio -type f -name *.config.js -o -name *.config.ts -o -name .eslintrc*)",
+      "Bash(npm list:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

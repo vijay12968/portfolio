@@ -1,0 +1,48 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="800" height="800" fill="#0a0a0a"/>
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0, 217, 255, 0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#grid)"/>
+
+  <!-- Gradient blobs -->
+  <circle cx="200" cy="200" r="150" fill="#00D9FF" opacity="0.1" filter="blur(40px)"/>
+  <circle cx="600" cy="600" r="150" fill="#FF006E" opacity="0.1" filter="blur(40px)"/>
+
+  <!-- Main icon circle -->
+  <circle cx="400" cy="350" r="120" fill="none" stroke="url(#gradient1)" stroke-width="4"/>
+
+  <!-- User icon -->
+  <circle cx="400" cy="320" r="45" fill="#00D9FF" opacity="0.8"/>
+  <path d="M 400 370 Q 400 380, 410 390 L 440 420 Q 450 430, 450 445 L 450 470 L 350 470 L 350 445 Q 350 430, 360 420 L 390 390 Q 400 380, 400 370" fill="#00D9FF" opacity="0.8"/>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF006E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00D9FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF006E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Text -->
+  <text x="400" y="540" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#gradient2)" text-anchor="middle">VEERAJ THOTA</text>
+  <text x="400" y="575" font-family="monospace" font-size="16" fill="#00D9FF" text-anchor="middle">DATA ENGINEER</text>
+
+  <!-- Decorative elements -->
+  <rect x="280" y="630" width="8" height="8" fill="none" stroke="#00D9FF" stroke-width="2" opacity="0.5"/>
+  <rect x="512" y="630" width="8" height="8" fill="none" stroke="#FF006E" stroke-width="2" opacity="0.5"/>
+
+  <!-- Bottom text -->
+  <text x="400" y="680" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">◆ PLACEHOLDER IMAGE ◆</text>
+  <text x="400" y="700" font-family="monospace" font-size="11" fill="#444" text-anchor="middle">Replace with your photo at /public/veeraj.jpg</text>
+</svg>
