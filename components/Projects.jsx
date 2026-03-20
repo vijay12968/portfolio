@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-
 function useInView(threshold = 0.1) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
@@ -46,32 +44,9 @@ const statusColors = {
 };
 
 export default function Projects() {
-  const [projects, setProjects] = useState(fallbackProjects);
-  const [loading, setLoading]   = useState(true);
+  const [projects] = useState(fallbackProjects);
+  const [loading]  = useState(false);
   const [ref, inView] = useInView(0.1);
-
-  useEffect(() => {
-    async function fetchProjects() {
-      try {
-        const res = await fetch('/api/github/repos');
-        if (!res.ok) throw new Error();
-        const result = await res.json();
-        if (result.data?.length > 0) {
-          setProjects(
-            result.data.slice(0, 3).map((p) => ({
-              title: p.title,
-              description: p.description || p.subtitle,
-              tech: p.tech || [],
-              status: 'Complete',
-              url: p.url || 'https://github.com/vijay12968',
-            }))
-          );
-        }
-      } catch { /* use fallback */ }
-      finally { setLoading(false); }
-    }
-    fetchProjects();
-  }, []);
 
   return (
     <section id="projects" className="py-28 px-6 bg-spa-white">

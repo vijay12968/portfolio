@@ -80,7 +80,7 @@ export default function Profile() {
                   <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                     Recently completed an internship at <strong style={{ color: 'var(--charcoal)' }}>BytesEdge</strong> (Jan – Mar 2026)
                     and serving as Operations Lead. My passion lies in building scalable data
-                    systems using Python, SQL, and modern cloud infrastructure.
+                    systems using Python, SQL, PostgreSQL, and Docker.
                   </p>
                 ),
               },
@@ -88,7 +88,7 @@ export default function Profile() {
                 delay: '500ms',
                 content: (
                   <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                    My expertise spans Apache Spark, Pandas, PostgreSQL, MongoDB, AWS, and Docker.
+                    My expertise spans Apache Spark, Pandas, PostgreSQL, MongoDB, and Docker.
                     Whether it's building ETL pipelines, optimizing database queries, or deploying
                     ML models — I engineer solutions that stand the test of scale.
                   </p>
