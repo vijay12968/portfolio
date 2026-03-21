@@ -26,11 +26,11 @@ export default function ContactPage() {
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'var(--color-text-faint)' }}>Email</p>
             {emailVisible ? (
               <a
-                href="mailto:veerajthota4@gmail.com"
+                href="mailto:tveeraj311@gmail.com"
                 className="text-sm font-medium"
                 style={{ color: 'var(--color-text)', textDecoration: 'none', borderBottom: '1px solid var(--color-border)' }}
               >
-                veerajthota4@gmail.com
+                tveeraj311@gmail.com
               </a>
             ) : (
               <button
@@ -72,6 +72,19 @@ export default function ContactPage() {
               github.com/vijay12968
             </a>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-faint)' }}>View code, projects, and technical work.</p>
+          </div>
+
+          {/* Phone */}
+          <div className="p-6" style={{ border: '1px solid var(--color-border)', borderRadius: '8px', background: 'var(--color-bg-card)' }}>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'var(--color-text-faint)' }}>Phone</p>
+            <a
+              href="tel:+918688301917"
+              className="text-sm font-medium"
+              style={{ color: 'var(--color-text)', textDecoration: 'none', borderBottom: '1px solid var(--color-border)' }}
+            >
+              +91 86883 01917
+            </a>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-faint)' }}>Available for calls. WhatsApp preferred.</p>
           </div>
 
           {/* Location */}

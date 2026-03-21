@@ -12,7 +12,7 @@ const quickLinks = [
 const socialLinks = [
   { href: 'https://github.com/vijay12968',                   label: 'GitHub',   external: true },
   { href: 'https://www.linkedin.com/in/veeraj-thota-9463a1290', label: 'LinkedIn', external: true },
-  { href: 'mailto:tveeraj311@gmail.com',                     label: 'Email',    external: false },
+  { href: 'mailto:tveeraj311@gmail.com', label: 'Email', external: false },
 ];
 
 export default function Footer() {
@@ -130,7 +130,7 @@ export default function Footer() {
                 </a>
               ))}
               <span className="block text-sm" style={{ color: 'rgba(255,255,255,0.25)', userSelect: 'none' }}>
-                veerajthota42@gmail.com
+                tveeraj311@gmail.com
               </span>
             </div>
           </div>

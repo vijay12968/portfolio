@@ -34,7 +34,7 @@ export default function Home() {
               <h1 className="text-5xl font-bold mb-4" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em', lineHeight: '1.1' }}>
                 Veeraj Thota
               </h1>
-              <p className="text-xl mb-3" style={{ color: 'var(--color-text-muted)' }}>Data Engineer, Scientist & Analyst</p>
+              <p className="text-xl mb-3" style={{ color: 'var(--color-text-muted)' }}>Aspiring Data Engineer, Scientist & Analyst</p>
               <p className="text-base mb-4" style={{ color: 'var(--color-text-faint)', lineHeight: '1.7', maxWidth: '420px' }}>
                 B.Tech CSE student at GRIET, Hyderabad. Building toward a career in data engineering and FinTech.
                 3 years programming experience across Python, SQL, and data systems.
