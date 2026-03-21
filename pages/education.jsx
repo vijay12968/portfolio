@@ -16,7 +16,7 @@ const education = [
   },
   {
     degree: 'Intermediate (Class XII) — MPC',
-    institution: 'Narayana Junior College',
+    institution: 'FIITJEE Saifabad Branch',
     location: 'Hyderabad, India',
     period: '2021 – 2023',
     status: 'Completed',
@@ -26,7 +26,7 @@ const education = [
   },
   {
     degree: 'Class X (SSC)',
-    institution: 'Narayana School',
+    institution: 'St Andrews School Old Bowenpally',
     location: 'Hyderabad, India',
     period: '2020 – 2021',
     status: 'Completed',
