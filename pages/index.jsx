@@ -60,16 +60,27 @@ export default function Home() {
                 Veeraj Thota
               </h1>
               <p className="text-xl mb-3" style={{ color: '#6B7280' }}>Data Engineer, Scientist & Analyst</p>
-              <p className="text-base mb-0" style={{ color: '#9CA3AF', lineHeight: '1.7', maxWidth: '420px' }}>
+              <p className="text-base mb-4" style={{ color: '#9CA3AF', lineHeight: '1.7', maxWidth: '420px' }}>
                 B.Tech CSE student at GRIET, Hyderabad. Building toward a career in data engineering and FinTech.
                 3 years programming experience across Python, SQL, and data systems.
               </p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { lang: 'English', note: 'Studied in English' },
+                  { lang: 'Telugu', note: 'Native' },
+                  { lang: 'Hindi', note: 'Street fluency' },
+                ].map(({ lang, note }) => (
+                  <span key={lang} style={{ fontSize: '11px', padding: '3px 10px', border: '1px solid #E5E7EB', borderRadius: '4px', color: '#6B7280' }}>
+                    {lang} <span style={{ color: '#9CA3AF' }}>· {note}</span>
+                  </span>
+                ))}
+              </div>
             </div>
             <div style={{ flexShrink: 0 }}>
               <img
                 src="/self.jpeg"
                 alt="Veeraj Thota"
-                style={{ width: '160px', height: '160px', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', border: '1px solid #E5E7EB', display: 'block' }}
+                style={{ width: '210px', height: '210px', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', border: '1px solid #E5E7EB', display: 'block' }}
               />
             </div>
           </div>
