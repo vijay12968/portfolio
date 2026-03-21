@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veeraj Thota — Quick Profile</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #1F2937;
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 48px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    @media print {
+      body { padding: 32px; }
+      .no-print { display: none; }
+    }
+    .header { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #E5E7EB; }
+    .name { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #1F2937; margin-bottom: 4px; }
+    .title { font-size: 15px; color: #6B7280; margin-bottom: 12px; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; color: #9CA3AF; }
+    .contact-row a { color: #374151; text-decoration: none; }
+
+    .section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9CA3AF;
+      margin-bottom: 12px;
+    }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .three-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 0; }
+
+    .stat-box { text-align: left; }
+    .stat-value { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #1F2937; }
+    .stat-sub { font-size: 10px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+
+    .item { margin-bottom: 16px; }
+    .item-title { font-size: 13px; font-weight: 600; color: #1F2937; margin-bottom: 2px; }
+    .item-sub { font-size: 12px; color: #6B7280; margin-bottom: 4px; }
+    .item-meta { font-size: 11px; color: #9CA3AF; }
+    .item-desc { font-size: 12px; color: #374151; margin-top: 4px; }
+
+    ul { list-style: none; }
+    ul li { display: flex; gap: 8px; margin-bottom: 6px; font-size: 12px; color: #374151; }
+    ul li::before { content: '—'; color: #9CA3AF; flex-shrink: 0; }
+
+    .skill-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag {
+      font-size: 11px;
+      padding: 3px 10px;
+      border: 1px solid #E5E7EB;
+      border-radius: 4px;
+      color: #374151;
+    }
+
+    .edu-row { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .metric-badge { text-align: right; }
+    .metric-value { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #1F2937; }
+    .metric-label { font-size: 10px; color: #9CA3AF; }
+
+    .divider { border: none; border-top: 1px solid #E5E7EB; margin: 24px 0; }
+
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1F2937;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: inherit;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="name">Veeraj Thota</div>
+    <div class="title">Data Engineer, Scientist & Analyst</div>
+    <div class="contact-row">
+      <span>Hyderabad, India</span>
+      <a href="mailto:veerajthota4@gmail.com">veerajthota4@gmail.com</a>
+      <a href="https://www.linkedin.com/in/veeraj-thota" target="_blank">linkedin.com/in/veeraj-thota</a>
+      <a href="https://github.com/veerajthota" target="_blank">github.com/veerajthota</a>
+      <a href="https://portfolio-sandy-two-27.vercel.app" target="_blank">Portfolio</a>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="section">
+    <div class="three-col">
+      <div class="stat-box">
+        <div class="stat-value">3 yrs</div>
+        <div class="stat-sub">Programming</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">3</div>
+        <div class="stat-sub">Projects</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">26</div>
+        <div class="stat-sub">Technologies</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">2027</div>
+        <div class="stat-sub">Graduation</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Two column: Profile + Skills -->
+  <div class="two-col section">
+    <div>
+      <div class="section-label">Profile</div>
+      <p style="font-size: 12px; color: #374151; line-height: 1.7;">
+        B.Tech CSE student at GRIET (2023–2027) with 3 years of programming experience.
+        Building toward a career in data engineering with a long-term focus on FinTech.
+        Hands-on across Python, SQL, and data systems through independent projects and academic work.
+        CSI Operations Lead — managing sponsorships, events, and team coordination.
+      </p>
+
+      <div style="margin-top: 16px;">
+        <div class="section-label">Looking For</div>
+        <ul>
+          <li>Internship in data engineering or data science</li>
+          <li>Available from mid-2026</li>
+          <li>Open to on-site, hybrid, or remote</li>
+          <li>Domain interest: FinTech, data-heavy products</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Core Skills</div>
+      <div style="margin-bottom: 12px;">
+        <div style="font-size: 11px; font-weight: 600; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Languages</div>
+        <div class="skill-grid">
+          <span class="skill-tag">Python (Intermediate)</span>
+          <span class="skill-tag">SQL (Intermediate)</span>
+          <span class="skill-tag">JavaScript (Beginner)</span>
+          <span class="skill-tag">Java (Intermediate)</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 12px;">
+        <div style="font-size: 11px; font-weight: 600; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Data and ML</div>
+        <div class="skill-grid">
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Scikit-Learn</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">Apache Spark</span>
+          <span class="skill-tag">FAISS</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 11px; font-weight: 600; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Infrastructure</div>
+        <div class="skill-grid">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-label">Projects</div>
+    <div class="two-col">
+      <div class="item">
+        <div class="item-title">Adobe GenSolve Hackathon</div>
+        <div class="item-sub">Curve regularization with ML and computer vision</div>
+        <div class="item-meta">Python · NumPy · Scikit-Learn · FAISS · Docker · FastAPI</div>
+        <div class="item-desc">Built a pipeline to identify, regularize, and complete geometric curves from noisy SVG input. Competed nationally.</div>
+      </div>
+      <div class="item">
+        <div class="item-title">AgriConnect</div>
+        <div class="item-sub">Full-stack farmer-to-consumer marketplace</div>
+        <div class="item-meta">Next.js · Node.js · MongoDB · PostgreSQL · React</div>
+        <div class="item-desc">Designed and built marketplace connecting 50+ farmers with buyers. Eliminated price markup through direct commerce.</div>
+      </div>
+      <div class="item">
+        <div class="item-title">Airline Fare Prediction</div>
+        <div class="item-sub">ML model for domestic flight fare forecasting</div>
+        <div class="item-meta">Python · Pandas · Scikit-Learn · Random Forest</div>
+        <div class="item-desc">Regression pipeline with 81.3% R² score predicting fares from 10,000+ flight records with temporal patterns.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Experience + Education side by side -->
+  <div class="two-col section">
+    <div>
+      <div class="section-label">Experience</div>
+      <div class="item">
+        <div class="item-title">Operations Lead — PR & Sponsorship</div>
+        <div class="item-sub">CSI GRIET Chapter</div>
+        <div class="item-meta">2024 – Present · Leadership</div>
+        <ul style="margin-top: 8px;">
+          <li>30% membership growth through structured engagement</li>
+          <li>₹50,000+ in corporate sponsorship secured</li>
+          <li>5+ major technical events coordinated end-to-end</li>
+        </ul>
+      </div>
+      <div class="item" style="margin-top: 16px;">
+        <div class="item-title">Project Intern</div>
+        <div class="item-sub">BytesEdge</div>
+        <div class="item-meta">Jan 2026 – Mar 2026 · Internship · Completed</div>
+        <ul style="margin-top: 8px;">
+          <li>UI/UX design, web development, digital marketing</li>
+          <li>Built responsive components in HTML/CSS/JS</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Education</div>
+      <div class="item">
+        <div class="edu-row">
+          <div>
+            <div class="item-title">B.Tech — CSE</div>
+            <div class="item-sub">GRIET, Hyderabad</div>
+            <div class="item-meta">2023 – 2027</div>
+          </div>
+          <div class="metric-badge">
+            <div class="metric-value">7.7</div>
+            <div class="metric-label">CGPA</div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="edu-row">
+          <div>
+            <div class="item-title">Intermediate (Class XII)</div>
+            <div class="item-sub">Narayana Junior College</div>
+            <div class="item-meta">2021 – 2023 · MPC</div>
+          </div>
+          <div class="metric-badge">
+            <div class="metric-value">83%</div>
+            <div class="metric-label">Percentage</div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="edu-row">
+          <div>
+            <div class="item-title">Class X (SSC)</div>
+            <div class="item-sub">Narayana School</div>
+            <div class="item-meta">2020 – 2021</div>
+          </div>
+          <div class="metric-badge">
+            <div class="metric-value">91%</div>
+            <div class="metric-label">Percentage</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <div class="section-label">Currently Learning</div>
+        <ul>
+          <li>Advanced Apache Spark (target: Q2 2026)</li>
+          <li>Kubernetes and Container Orchestration (Q3 2026)</li>
+          <li>Financial Risk Modeling (Q4 2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
