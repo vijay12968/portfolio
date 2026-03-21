@@ -11,7 +11,7 @@ const quickLinks = [
 
 const socialLinks = [
   { href: 'https://github.com/vijay12968',                   label: 'GitHub',   external: true },
-  { href: 'https://linkedin.com/in/veeraj-thota-9463a1290', label: 'LinkedIn', external: true },
+  { href: 'https://www.linkedin.com/in/veeraj-thota-9463a1290', label: 'LinkedIn', external: true },
   { href: 'mailto:tveeraj311@gmail.com',                     label: 'Email',    external: false },
 ];
 

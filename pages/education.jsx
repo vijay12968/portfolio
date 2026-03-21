@@ -61,38 +61,38 @@ export default function EducationPage() {
       </Head>
 
       <div className="max-w-4xl mx-auto px-6 py-16">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#6B7280' }}>Academic</p>
-        <h1 className="text-4xl font-bold mb-3" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>Education</h1>
-        <p className="mb-12" style={{ color: '#6B7280' }}>Academic background and coursework relevant to data engineering and software development.</p>
+        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Academic</p>
+        <h1 className="text-4xl font-bold mb-3" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>Education</h1>
+        <p className="mb-12" style={{ color: 'var(--color-text-muted)' }}>Academic background and coursework relevant to data engineering and software development.</p>
 
         <div className="space-y-8">
           {education.map((edu, i) => (
-            <div key={i} className="p-6" style={{ border: '1px solid #E5E7EB', borderRadius: '8px', background: '#fff' }}>
+            <div key={i} className="p-6" style={{ border: '1px solid var(--color-border)', borderRadius: '8px', background: 'var(--color-bg-card)' }}>
               <div className="flex items-start justify-between gap-4 flex-wrap mb-5">
                 <div>
-                  <h2 className="text-base font-semibold mb-1" style={{ color: '#1F2937' }}>{edu.degree}</h2>
-                  <p className="text-sm" style={{ color: '#6B7280' }}>{edu.institution}</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#9CA3AF' }}>{edu.shortName}</p>
+                  <h2 className="text-base font-semibold mb-1" style={{ color: 'var(--color-text)' }}>{edu.degree}</h2>
+                  <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{edu.institution}</p>
+                  <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-faint)' }}>{edu.shortName}</p>
                 </div>
                 <div className="text-right flex-shrink-0">
                   <div className="mb-1">
-                    <span className="text-2xl font-bold" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>{edu.metric}</span>
-                    <p className="text-xs" style={{ color: '#9CA3AF' }}>{edu.metricLabel}</p>
+                    <span className="text-2xl font-bold" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>{edu.metric}</span>
+                    <p className="text-xs" style={{ color: 'var(--color-text-faint)' }}>{edu.metricLabel}</p>
                   </div>
-                  <span className="text-xs font-medium px-2 py-0.5 rounded" style={{ background: '#F3F4F6', color: '#374151' }}>{edu.status}</span>
-                  <p className="text-xs mt-1" style={{ color: '#9CA3AF' }}>{edu.period}</p>
+                  <span className="text-xs font-medium px-2 py-0.5 rounded" style={{ background: 'var(--color-bg-subtle2)', color: 'var(--color-text-secondary)' }}>{edu.status}</span>
+                  <p className="text-xs mt-1" style={{ color: 'var(--color-text-faint)' }}>{edu.period}</p>
                 </div>
               </div>
 
-              <p className="text-sm leading-relaxed mb-5" style={{ color: '#6B7280' }}>{edu.description}</p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--color-text-muted)' }}>{edu.description}</p>
 
               {edu.highlights.length > 0 && (
                 <div className="mb-5">
-                  <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#9CA3AF' }}>Highlights</p>
+                  <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'var(--color-text-faint)' }}>Highlights</p>
                   <ul className="space-y-2">
                     {edu.highlights.map((h, j) => (
-                      <li key={j} className="flex gap-3 text-sm" style={{ color: '#374151' }}>
-                        <span className="flex-shrink-0 mt-0.5" style={{ color: '#9CA3AF' }}>—</span>
+                      <li key={j} className="flex gap-3 text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+                        <span className="flex-shrink-0 mt-0.5" style={{ color: 'var(--color-text-faint)' }}>—</span>
                         {h}
                       </li>
                     ))}
@@ -101,10 +101,10 @@ export default function EducationPage() {
               )}
 
               <div>
-                <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#9CA3AF' }}>Relevant Courses</p>
+                <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: 'var(--color-text-faint)' }}>Relevant Courses</p>
                 <div className="flex flex-wrap gap-2">
                   {edu.relevantCourses.map(course => (
-                    <span key={course} className="text-xs px-2.5 py-1 rounded" style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', color: '#374151' }}>
+                    <span key={course} className="text-xs px-2.5 py-1 rounded" style={{ background: 'var(--color-bg-subtle)', border: '1px solid var(--color-border)', color: 'var(--color-text-secondary)' }}>
                       {course}
                     </span>
                   ))}
@@ -114,11 +114,11 @@ export default function EducationPage() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 flex flex-wrap gap-4" style={{ borderTop: '1px solid #E5E7EB' }}>
-          <Link href="/experience" className="text-sm font-medium px-4 py-2 rounded" style={{ background: '#1F2937', color: '#fff', textDecoration: 'none' }}>
+        <div className="mt-12 pt-8 flex flex-wrap gap-4" style={{ borderTop: '1px solid var(--color-border)' }}>
+          <Link href="/experience" className="text-sm font-medium px-4 py-2 rounded" style={{ background: 'var(--color-btn-bg)', color: '#fff', textDecoration: 'none' }}>
             View Experience
           </Link>
-          <Link href="/skills" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid #E5E7EB', color: '#1F2937', textDecoration: 'none' }}>
+          <Link href="/skills" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid var(--color-border)', color: 'var(--color-text)', textDecoration: 'none' }}>
             Technical Skills
           </Link>
         </div>

@@ -84,9 +84,9 @@ export default function SkillsPage() {
       </Head>
 
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#6B7280' }}>Capabilities</p>
-        <h1 className="text-4xl font-bold mb-3" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>Technical Skills</h1>
-        <p className="mb-10" style={{ color: '#6B7280' }}>
+        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Capabilities</p>
+        <h1 className="text-4xl font-bold mb-3" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>Technical Skills</h1>
+        <p className="mb-10" style={{ color: 'var(--color-text-muted)' }}>
           3 years of programming experience. Each skill shows proficiency level and projects where it was applied.
         </p>
 
@@ -98,9 +98,9 @@ export default function SkillsPage() {
               onClick={() => setActiveFilter(f)}
               className="text-sm font-medium px-4 py-1.5 rounded transition-colors"
               style={{
-                background: activeFilter === f ? '#1F2937' : '#F9FAFB',
-                color: activeFilter === f ? '#fff' : '#6B7280',
-                border: activeFilter === f ? '1px solid #1F2937' : '1px solid #E5E7EB',
+                background: activeFilter === f ? 'var(--color-btn-bg)' : 'var(--color-bg-subtle)',
+                color: activeFilter === f ? '#fff' : 'var(--color-text-muted)',
+                border: activeFilter === f ? '1px solid var(--color-btn-bg)' : '1px solid var(--color-border)',
                 cursor: 'pointer',
               }}
             >
@@ -111,15 +111,15 @@ export default function SkillsPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {filtered.map(category => (
-            <div key={category.id} className="p-6" style={{ border: '1px solid #E5E7EB', borderRadius: '8px', background: '#fff' }}>
-              <h2 className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: '#6B7280' }}>
+            <div key={category.id} className="p-6" style={{ border: '1px solid var(--color-border)', borderRadius: '8px', background: 'var(--color-bg-card)' }}>
+              <h2 className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--color-text-muted)' }}>
                 {category.label}
               </h2>
               <div className="space-y-5">
                 {category.skills.map((skill, i) => (
-                  <div key={i} className="pl-3" style={{ borderLeft: '2px solid #E5E7EB' }}>
-                    <p className="text-sm font-medium" style={{ color: '#1F2937' }}>{skill.name}</p>
-                    <p className="text-xs mt-0.5" style={{ color: '#9CA3AF' }}>{skill.level}</p>
+                  <div key={i} className="pl-3" style={{ borderLeft: '2px solid var(--color-border)' }}>
+                    <p className="text-sm font-medium" style={{ color: 'var(--color-text)' }}>{skill.name}</p>
+                    <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-faint)' }}>{skill.level}</p>
                     <p className="text-xs mt-1" style={{ color: '#D1D5DB' }}>
                       {skill.projects.join(', ')}
                     </p>
@@ -131,7 +131,7 @@ export default function SkillsPage() {
         </div>
 
         {/* Stats */}
-        <div className="pt-10 mb-12" style={{ borderTop: '1px solid #E5E7EB' }}>
+        <div className="pt-10 mb-12" style={{ borderTop: '1px solid var(--color-border)' }}>
           <div className="grid grid-cols-3 gap-8">
             {[
               { value: '3 years', label: 'Programming Experience' },
@@ -139,8 +139,8 @@ export default function SkillsPage() {
               { value: '26', label: 'Technologies' },
             ].map((stat, i) => (
               <div key={i}>
-                <p className="text-2xl font-bold" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>{stat.value}</p>
-                <p className="text-xs uppercase tracking-widest mt-1" style={{ color: '#6B7280' }}>{stat.label}</p>
+                <p className="text-2xl font-bold" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>{stat.value}</p>
+                <p className="text-xs uppercase tracking-widest mt-1" style={{ color: 'var(--color-text-muted)' }}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -148,10 +148,10 @@ export default function SkillsPage() {
 
         {/* CTA */}
         <div className="flex flex-wrap gap-4">
-          <Link href="/skills/learning-path" className="text-sm font-medium px-4 py-2 rounded" style={{ background: '#1F2937', color: '#fff', textDecoration: 'none' }}>
+          <Link href="/skills/learning-path" className="text-sm font-medium px-4 py-2 rounded" style={{ background: 'var(--color-btn-bg)', color: '#fff', textDecoration: 'none' }}>
             View Learning Path
           </Link>
-          <Link href="/projects" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid #E5E7EB', color: '#1F2937', textDecoration: 'none' }}>
+          <Link href="/projects" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid var(--color-border)', color: 'var(--color-text)', textDecoration: 'none' }}>
             See Projects Using These Skills
           </Link>
         </div>

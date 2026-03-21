@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Dark Mode Color System ─────────────────────────────── */
+:root {
+  --color-bg: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-bg-subtle: #F9FAFB;
+  --color-bg-subtle2: #F3F4F6;
+  --color-text: #1F2937;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6B7280;
+  --color-text-faint: #9CA3AF;
+  --color-border: #E5E7EB;
+  --color-border-subtle: #F3F4F6;
+  --color-btn-bg: #1F2937;
+  --color-nav-bg: rgba(255,255,255,0.97);
+  --color-nav-bg-scrolled: rgba(250,250,250,0.97);
+}
+
+html.dark {
+  --color-bg: #0F172A;
+  --color-bg-card: #1E293B;
+  --color-bg-subtle: #1E293B;
+  --color-bg-subtle2: #334155;
+  --color-text: #F1F5F9;
+  --color-text-secondary: #E2E8F0;
+  --color-text-muted: #CBD5E1;
+  --color-text-faint: #94A3B8;
+  --color-border: #334155;
+  --color-border-subtle: #1E293B;
+  --color-btn-bg: #3B82F6;
+  --color-nav-bg: rgba(15,23,42,0.97);
+  --color-nav-bg-scrolled: rgba(15,23,42,0.97);
+}
+
 /* ─── CSS Variables ─────────────────────────────────────── */
 :root {
   --spa-white: #fafafa;
@@ -39,8 +72,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--spa-white);
-  color: var(--charcoal);
+  background: var(--color-bg);
+  color: var(--color-text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

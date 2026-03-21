@@ -21,9 +21,9 @@ export default function ProjectsPage() {
       </Head>
 
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#6B7280' }}>Work</p>
-        <h1 className="text-4xl font-bold mb-3" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>Projects</h1>
-        <p className="mb-10" style={{ color: '#6B7280' }}>Data engineering, machine learning, and full-stack applications. Click any project for the full case study.</p>
+        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Work</p>
+        <h1 className="text-4xl font-bold mb-3" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>Projects</h1>
+        <p className="mb-10" style={{ color: 'var(--color-text-muted)' }}>Data engineering, machine learning, and full-stack applications. Click any project for the full case study.</p>
 
         {/* Filters */}
         <div className="flex flex-wrap gap-2 mb-8">
@@ -33,16 +33,16 @@ export default function ProjectsPage() {
               onClick={() => setActiveFilter(cat)}
               className="text-sm font-medium px-4 py-1.5 rounded transition-colors"
               style={{
-                background: activeFilter === cat ? '#1F2937' : '#F9FAFB',
-                color: activeFilter === cat ? '#fff' : '#6B7280',
-                border: activeFilter === cat ? '1px solid #1F2937' : '1px solid #E5E7EB',
+                background: activeFilter === cat ? 'var(--color-btn-bg)' : 'var(--color-bg-subtle)',
+                color: activeFilter === cat ? '#fff' : 'var(--color-text-muted)',
+                border: activeFilter === cat ? '1px solid var(--color-btn-bg)' : '1px solid var(--color-border)',
                 cursor: 'pointer',
               }}
             >
               {cat}
             </button>
           ))}
-          <span className="ml-2 text-sm self-center" style={{ color: '#9CA3AF' }}>
+          <span className="ml-2 text-sm self-center" style={{ color: 'var(--color-text-faint)' }}>
             Showing {filtered.length} of {projects.length}
           </span>
         </div>
@@ -53,36 +53,36 @@ export default function ProjectsPage() {
             <div
               key={project.slug}
               className="flex flex-col transition-colors"
-              style={{ border: '1px solid #E5E7EB', borderRadius: '8px', background: '#fff', overflow: 'hidden' }}
+              style={{ border: '1px solid var(--color-border)', borderRadius: '8px', background: 'var(--color-bg-card)', overflow: 'hidden' }}
             >
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex flex-wrap gap-1.5">
                     {project.category.slice(0, 2).map(cat => (
-                      <span key={cat} className="text-xs font-medium px-2 py-0.5 rounded" style={{ background: '#F3F4F6', color: '#6B7280' }}>
+                      <span key={cat} className="text-xs font-medium px-2 py-0.5 rounded" style={{ background: 'var(--color-bg-subtle2)', color: 'var(--color-text-muted)' }}>
                         {cat}
                       </span>
                     ))}
                   </div>
-                  <span className="text-xs font-medium" style={{ color: '#9CA3AF' }}>{project.status}</span>
+                  <span className="text-xs font-medium" style={{ color: 'var(--color-text-faint)' }}>{project.status}</span>
                 </div>
 
-                <h2 className="text-base font-semibold mb-3" style={{ color: '#1F2937' }}>{project.shortTitle}</h2>
-                <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: '#6B7280' }}>{project.summary}</p>
+                <h2 className="text-base font-semibold mb-3" style={{ color: 'var(--color-text)' }}>{project.shortTitle}</h2>
+                <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: 'var(--color-text-muted)' }}>{project.summary}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.tech.slice(0, 4).map(t => (
-                    <span key={t} className="text-xs px-2 py-0.5 rounded" style={{ background: '#F9FAFB', color: '#6B7280', border: '1px solid #E5E7EB' }}>
+                    <span key={t} className="text-xs px-2 py-0.5 rounded" style={{ background: 'var(--color-bg-subtle)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
                       {t}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center gap-4 pt-4" style={{ borderTop: '1px solid #F3F4F6' }}>
+                <div className="flex items-center gap-4 pt-4" style={{ borderTop: '1px solid var(--color-bg-subtle2)' }}>
                   <Link
                     href={`/projects/${project.slug}`}
                     className="text-sm font-medium transition-colors"
-                    style={{ color: '#1F2937', textDecoration: 'none', borderBottom: '1px solid #1F2937' }}
+                    style={{ color: 'var(--color-text)', textDecoration: 'none', borderBottom: '1px solid var(--color-text)' }}
                   >
                     View Case Study
                   </Link>
@@ -91,7 +91,7 @@ export default function ProjectsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm transition-colors"
-                    style={{ color: '#6B7280', textDecoration: 'none' }}
+                    style={{ color: 'var(--color-text-muted)', textDecoration: 'none' }}
                   >
                     GitHub
                   </a>
@@ -102,21 +102,21 @@ export default function ProjectsPage() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="py-16 text-center" style={{ color: '#9CA3AF' }}>
+          <div className="py-16 text-center" style={{ color: 'var(--color-text-faint)' }}>
             <p className="text-sm">No projects in this category.</p>
-            <button onClick={() => setActiveFilter('All')} className="mt-3 text-sm font-medium" style={{ color: '#1F2937', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>
+            <button onClick={() => setActiveFilter('All')} className="mt-3 text-sm font-medium" style={{ color: 'var(--color-text)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>
               Show all projects
             </button>
           </div>
         )}
 
-        <div className="mt-12 pt-8" style={{ borderTop: '1px solid #E5E7EB' }}>
+        <div className="mt-12 pt-8" style={{ borderTop: '1px solid var(--color-border)' }}>
           <a
             href="https://github.com/vijay12968"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium"
-            style={{ color: '#1F2937', textDecoration: 'underline' }}
+            style={{ color: 'var(--color-text)', textDecoration: 'underline' }}
           >
             View all repositories on GitHub
           </a>

@@ -64,9 +64,9 @@ const phases = [
 
 const statusLabel = { current: 'Current', upcoming: 'Next', planned: 'Planned' };
 const statusStyle = {
-  current:  { background: '#1F2937', color: '#fff' },
-  upcoming: { background: '#E5E7EB', color: '#1F2937' },
-  planned:  { background: '#F9FAFB', color: '#6B7280', border: '1px solid #E5E7EB' },
+  current:  { background: 'var(--color-btn-bg)', color: '#fff' },
+  upcoming: { background: 'var(--color-bg-subtle2)', color: 'var(--color-text)' },
+  planned:  { background: 'var(--color-bg-subtle)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' },
 };
 
 export default function CareerJourney() {
@@ -80,48 +80,48 @@ export default function CareerJourney() {
       </Head>
 
       <div className="max-w-4xl mx-auto px-6 py-16">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#6B7280' }}>Path Forward</p>
-        <h1 className="text-4xl font-bold mb-3" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>Career Trajectory</h1>
-        <p className="mb-12 max-w-lg" style={{ color: '#6B7280' }}>
+        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Path Forward</p>
+        <h1 className="text-4xl font-bold mb-3" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>Career Trajectory</h1>
+        <p className="mb-12 max-w-lg" style={{ color: 'var(--color-text-muted)' }}>
           Four phases from data specialist to strategic leadership in FinTech. Click each phase to expand.
         </p>
 
         <div className="space-y-3">
           {phases.map((phase) => (
-            <div key={phase.id} style={{ border: '1px solid #E5E7EB', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
+            <div key={phase.id} style={{ border: '1px solid var(--color-border)', borderRadius: '8px', overflow: 'hidden', background: 'var(--color-bg-card)' }}>
               <button
                 onClick={() => setExpanded(expanded === phase.id ? null : phase.id)}
                 className="w-full px-6 py-5 text-left flex items-start justify-between transition-colors"
-                style={{ background: expanded === phase.id ? '#F9FAFB' : '#fff', cursor: 'pointer', border: 'none' }}
+                style={{ background: expanded === phase.id ? 'var(--color-bg-subtle)' : 'var(--color-bg-card)', cursor: 'pointer', border: 'none' }}
               >
                 <div className="flex-1 min-w-0 pr-4">
                   <div className="flex items-center gap-3 mb-1 flex-wrap">
-                    <h2 className="text-base font-semibold" style={{ color: '#1F2937' }}>{phase.title}</h2>
+                    <h2 className="text-base font-semibold" style={{ color: 'var(--color-text)' }}>{phase.title}</h2>
                     <span className="text-xs font-semibold px-2 py-0.5 rounded" style={statusStyle[phase.status]}>
                       {statusLabel[phase.status]}
                     </span>
                   </div>
-                  <p className="text-xs mb-2" style={{ color: '#9CA3AF' }}>{phase.timeline}</p>
-                  <p className="text-sm" style={{ color: '#374151' }}>{phase.description}</p>
+                  <p className="text-xs mb-2" style={{ color: 'var(--color-text-faint)' }}>{phase.timeline}</p>
+                  <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{phase.description}</p>
                 </div>
-                <span className="text-xl font-light flex-shrink-0" style={{ color: '#9CA3AF' }}>
+                <span className="text-xl font-light flex-shrink-0" style={{ color: 'var(--color-text-faint)' }}>
                   {expanded === phase.id ? '−' : '+'}
                 </span>
               </button>
 
               {expanded === phase.id && (
-                <div className="px-6 py-5" style={{ borderTop: '1px solid #E5E7EB', background: '#F9FAFB' }}>
+                <div className="px-6 py-5" style={{ borderTop: '1px solid var(--color-border)', background: 'var(--color-bg-subtle)' }}>
                   <ul className="space-y-2.5 mb-5">
                     {phase.details.map((d, i) => (
-                      <li key={i} className="flex gap-3 text-sm" style={{ color: '#374151' }}>
-                        <span className="flex-shrink-0 mt-0.5" style={{ color: '#9CA3AF' }}>—</span>
+                      <li key={i} className="flex gap-3 text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+                        <span className="flex-shrink-0 mt-0.5" style={{ color: 'var(--color-text-faint)' }}>—</span>
                         {d}
                       </li>
                     ))}
                   </ul>
-                  <div className="pt-4" style={{ borderTop: '1px solid #E5E7EB' }}>
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-1" style={{ color: '#6B7280' }}>Milestone</p>
-                    <p className="text-sm" style={{ color: '#374151' }}>{phase.milestone}</p>
+                  <div className="pt-4" style={{ borderTop: '1px solid var(--color-border)' }}>
+                    <p className="text-xs font-semibold tracking-widest uppercase mb-1" style={{ color: 'var(--color-text-muted)' }}>Milestone</p>
+                    <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{phase.milestone}</p>
                   </div>
                 </div>
               )}
@@ -129,15 +129,15 @@ export default function CareerJourney() {
           ))}
         </div>
 
-        <div className="mt-16 pt-8" style={{ borderTop: '1px solid #E5E7EB' }}>
-          <p className="text-sm mb-6" style={{ color: '#6B7280' }}>
+        <div className="mt-16 pt-8" style={{ borderTop: '1px solid var(--color-border)' }}>
+          <p className="text-sm mb-6" style={{ color: 'var(--color-text-muted)' }}>
             Currently in Phase 1. Internship applications begin May 2026.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/projects" className="text-sm font-medium px-4 py-2 rounded" style={{ background: '#1F2937', color: '#fff', textDecoration: 'none' }}>
+            <Link href="/projects" className="text-sm font-medium px-4 py-2 rounded" style={{ background: 'var(--color-btn-bg)', color: '#fff', textDecoration: 'none' }}>
               See Current Projects
             </Link>
-            <Link href="/skills/learning-path" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid #E5E7EB', color: '#1F2937', textDecoration: 'none' }}>
+            <Link href="/skills/learning-path" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid var(--color-border)', color: 'var(--color-text)', textDecoration: 'none' }}>
               Learning Path
             </Link>
           </div>

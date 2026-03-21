@@ -43,33 +43,33 @@ export default function LearningPath() {
       </Head>
 
       <div className="max-w-4xl mx-auto px-6 py-16">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#6B7280' }}>Development Areas</p>
-        <h1 className="text-4xl font-bold mb-3" style={{ color: '#1F2937', letterSpacing: '-0.02em' }}>Learning Path</h1>
-        <p className="mb-12 max-w-lg" style={{ color: '#6B7280' }}>
+        <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Development Areas</p>
+        <h1 className="text-4xl font-bold mb-3" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>Learning Path</h1>
+        <p className="mb-12 max-w-lg" style={{ color: 'var(--color-text-muted)' }}>
           Skills in active development and the reasoning behind prioritization. Learning tied directly to career goals.
         </p>
 
         {/* Currently Learning */}
         <section className="mb-16">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: '#6B7280' }}>Now — Active Learning</p>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--color-text-muted)' }}>Now — Active Learning</p>
           <div className="space-y-4">
             {currentLearning.map((item, i) => (
-              <div key={i} className="p-6" style={{ border: '1px solid #E5E7EB', borderRadius: '8px', background: '#fff' }}>
+              <div key={i} className="p-6" style={{ border: '1px solid var(--color-border)', borderRadius: '8px', background: 'var(--color-bg-card)' }}>
                 <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
-                  <h2 className="text-base font-semibold" style={{ color: '#1F2937' }}>{item.skill}</h2>
+                  <h2 className="text-base font-semibold" style={{ color: 'var(--color-text)' }}>{item.skill}</h2>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs px-2 py-0.5 rounded" style={{ background: '#F3F4F6', color: '#6B7280' }}>{item.status}</span>
-                    <span className="text-xs" style={{ color: '#9CA3AF' }}>Target: {item.target}</span>
+                    <span className="text-xs px-2 py-0.5 rounded" style={{ background: 'var(--color-bg-subtle2)', color: 'var(--color-text-muted)' }}>{item.status}</span>
+                    <span className="text-xs" style={{ color: 'var(--color-text-faint)' }}>Target: {item.target}</span>
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <div className="pl-3" style={{ borderLeft: '2px solid #E5E7EB' }}>
-                    <p className="text-xs font-medium mb-1 uppercase tracking-wide" style={{ color: '#9CA3AF' }}>Why</p>
-                    <p className="text-sm" style={{ color: '#374151' }}>{item.why}</p>
+                  <div className="pl-3" style={{ borderLeft: '2px solid var(--color-border)' }}>
+                    <p className="text-xs font-medium mb-1 uppercase tracking-wide" style={{ color: 'var(--color-text-faint)' }}>Why</p>
+                    <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{item.why}</p>
                   </div>
-                  <div className="pl-3" style={{ borderLeft: '2px solid #E5E7EB' }}>
-                    <p className="text-xs font-medium mb-1 uppercase tracking-wide" style={{ color: '#9CA3AF' }}>Applying in</p>
-                    <p className="text-sm" style={{ color: '#374151' }}>{item.applying}</p>
+                  <div className="pl-3" style={{ borderLeft: '2px solid var(--color-border)' }}>
+                    <p className="text-xs font-medium mb-1 uppercase tracking-wide" style={{ color: 'var(--color-text-faint)' }}>Applying in</p>
+                    <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>{item.applying}</p>
                   </div>
                 </div>
               </div>
@@ -78,25 +78,25 @@ export default function LearningPath() {
         </section>
 
         {/* Future Focus */}
-        <section className="mb-16" style={{ borderTop: '1px solid #E5E7EB', paddingTop: '48px' }}>
-          <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: '#6B7280' }}>Next 12 Months — Future Focus</p>
+        <section className="mb-16" style={{ borderTop: '1px solid var(--color-border)', paddingTop: '48px' }}>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: 'var(--color-text-muted)' }}>Next 12 Months — Future Focus</p>
           <div className="space-y-3">
             {futureFocus.map((item, i) => (
-              <div key={i} className="flex items-start justify-between p-4 gap-4" style={{ border: '1px solid #E5E7EB', borderRadius: '8px' }}>
-                <div className="pl-3" style={{ borderLeft: '2px solid #E5E7EB' }}>
-                  <p className="text-sm font-medium" style={{ color: '#1F2937' }}>{item.skill}</p>
-                  <p className="text-xs mt-0.5" style={{ color: '#9CA3AF' }}>{item.context}</p>
+              <div key={i} className="flex items-start justify-between p-4 gap-4" style={{ border: '1px solid var(--color-border)', borderRadius: '8px' }}>
+                <div className="pl-3" style={{ borderLeft: '2px solid var(--color-border)' }}>
+                  <p className="text-sm font-medium" style={{ color: 'var(--color-text)' }}>{item.skill}</p>
+                  <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-faint)' }}>{item.context}</p>
                 </div>
-                <span className="text-xs flex-shrink-0" style={{ color: '#9CA3AF' }}>{item.timeline}</span>
+                <span className="text-xs flex-shrink-0" style={{ color: 'var(--color-text-faint)' }}>{item.timeline}</span>
               </div>
             ))}
           </div>
         </section>
 
         {/* Philosophy */}
-        <section className="mb-12" style={{ borderTop: '1px solid #E5E7EB', paddingTop: '48px' }}>
-          <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#6B7280' }}>Philosophy</p>
-          <h2 className="text-2xl font-bold mb-6" style={{ color: '#1F2937' }}>Why a Learning Path Matters</h2>
+        <section className="mb-12" style={{ borderTop: '1px solid var(--color-border)', paddingTop: '48px' }}>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Philosophy</p>
+          <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text)' }}>Why a Learning Path Matters</h2>
           <div className="space-y-4">
             {[
               { point: 'Strategic learning over reactive learning', detail: 'Each item on this list is tied to a specific career goal, not picked because it is trending.' },
@@ -104,19 +104,19 @@ export default function LearningPath() {
               { point: 'Learning tied to application', detail: 'Every skill being actively learned is connected to a project or use case. Abstract learning without application is low-retention.' },
               { point: 'Continuous growth mindset', detail: 'The list evolves as goals evolve. When internship goals shift, the learning list shifts with them.' },
             ].map((item, i) => (
-              <div key={i} className="pl-6" style={{ borderLeft: '2px solid #E5E7EB' }}>
-                <p className="text-sm font-semibold mb-1" style={{ color: '#1F2937' }}>{item.point}</p>
-                <p className="text-sm" style={{ color: '#6B7280' }}>{item.detail}</p>
+              <div key={i} className="pl-6" style={{ borderLeft: '2px solid var(--color-border)' }}>
+                <p className="text-sm font-semibold mb-1" style={{ color: 'var(--color-text)' }}>{item.point}</p>
+                <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{item.detail}</p>
               </div>
             ))}
           </div>
         </section>
 
         <div className="flex flex-wrap gap-4">
-          <Link href="/projects" className="text-sm font-medium px-4 py-2 rounded" style={{ background: '#1F2937', color: '#fff', textDecoration: 'none' }}>
+          <Link href="/projects" className="text-sm font-medium px-4 py-2 rounded" style={{ background: 'var(--color-btn-bg)', color: '#fff', textDecoration: 'none' }}>
             See Current Projects
           </Link>
-          <Link href="/about" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid #E5E7EB', color: '#1F2937', textDecoration: 'none' }}>
+          <Link href="/about" className="text-sm font-medium px-4 py-2 rounded" style={{ border: '1px solid var(--color-border)', color: 'var(--color-text)', textDecoration: 'none' }}>
             About My Approach
           </Link>
         </div>
