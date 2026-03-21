@@ -52,15 +52,27 @@ export default function Home() {
       <main style={{ flex: 1, paddingTop: '65px' }}>
         {/* Hero */}
         <div className="max-w-4xl mx-auto px-6 py-20">
-          <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: '#6B7280' }}>Portfolio</p>
-          <h1 className="text-5xl font-bold mb-4" style={{ color: '#1F2937', letterSpacing: '-0.02em', lineHeight: '1.1' }}>
-            Veeraj Thota
-          </h1>
-          <p className="text-xl mb-3" style={{ color: '#6B7280' }}>Data Engineer, Scientist & Analyst</p>
-          <p className="text-base max-w-lg mb-12" style={{ color: '#9CA3AF', lineHeight: '1.7' }}>
-            B.Tech CSE student at GRIET, Hyderabad. Building toward a career in data engineering and FinTech.
-            3 years programming experience across Python, SQL, and data systems.
-          </p>
+          {/* Hero layout: text left, photo right */}
+          <div className="flex items-start justify-between gap-10 flex-wrap mb-12">
+            <div style={{ flex: '1 1 320px' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ color: '#6B7280' }}>Portfolio</p>
+              <h1 className="text-5xl font-bold mb-4" style={{ color: '#1F2937', letterSpacing: '-0.02em', lineHeight: '1.1' }}>
+                Veeraj Thota
+              </h1>
+              <p className="text-xl mb-3" style={{ color: '#6B7280' }}>Data Engineer, Scientist & Analyst</p>
+              <p className="text-base mb-0" style={{ color: '#9CA3AF', lineHeight: '1.7', maxWidth: '420px' }}>
+                B.Tech CSE student at GRIET, Hyderabad. Building toward a career in data engineering and FinTech.
+                3 years programming experience across Python, SQL, and data systems.
+              </p>
+            </div>
+            <div style={{ flexShrink: 0 }}>
+              <img
+                src="/self.jpeg"
+                alt="Veeraj Thota"
+                style={{ width: '160px', height: '160px', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', border: '1px solid #E5E7EB', display: 'block' }}
+              />
+            </div>
+          </div>
 
           <div className="flex flex-wrap gap-3 mb-20">
             <Link href="/projects" className="text-sm font-medium px-5 py-2.5 rounded" style={{ background: '#1F2937', color: '#fff', textDecoration: 'none' }}>
