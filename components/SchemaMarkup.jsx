@@ -9,7 +9,7 @@ const SchemaMarkup = () => {
     url: "https://portfolio-sandy-two-27.vercel.app",
     image: "https://portfolio-sandy-two-27.vercel.app/self.jpeg",
     description:
-      "3rd-year B.Tech CSE student with full-stack data expertise (pipelines, ML, analytics). Adobe Hackathon finalist ready for Data Engineer, Data Scientist, or Data Analyst roles in FinTech. Python • SQL • ML • Full-Stack.",
+      "Data engineer, scientist, and analyst. B.Tech Computer Science. Adobe Hackathon finalist. Full-stack development expertise.",
     sameAs: [
       "https://linkedin.com/in/veeraj-thota-9463a1290",
       "https://github.com/vijay12968",
@@ -20,14 +20,6 @@ const SchemaMarkup = () => {
       "Data Science",
       "Data Analysis",
       "Full-Stack Development",
-      "FinTech",
-      "AI Integration",
-      "Python",
-      "SQL",
-      "Docker",
-      "FastAPI",
-      "React",
-      "Next.js",
     ],
     email: "tveeraj311@gmail.com",
     workLocation: {
@@ -36,8 +28,7 @@ const SchemaMarkup = () => {
     },
     affiliation: {
       "@type": "EducationalOrganization",
-      name: "Gokaraju Rangaraju Institute of Engineering and Technology (GRIET)",
-      location: "Hyderabad, India",
+      name: "Gokaraju Rangaraju Institute of Engineering and Technology",
     },
   };
 

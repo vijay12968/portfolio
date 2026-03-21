@@ -89,7 +89,7 @@ export default function Hero() {
               style={{ transitionDelay: '350ms' }}
             >
               <p className="text-lg font-medium" style={{ color: 'var(--sage)' }}>
-                Data Professional · Engineer · Scientist · Analyst
+                Data Engineer, Scientist &amp; Analyst
               </p>
             </div>
 
@@ -98,9 +98,8 @@ export default function Hero() {
               style={{ transitionDelay: '500ms' }}
             >
               <p className="leading-relaxed" style={{ color: 'var(--text-secondary)', maxWidth: '480px' }}>
-                3rd-year B.Tech CSE student at GRIET building scalable data systems. Adobe Hackathon
-                finalist ready for Data Engineer, Data Scientist, or Data Analyst positions in FinTech.
-                Python · SQL · ML · Full-Stack.
+                3rd-year B.Tech CSE student at GRIET. Full-stack developer with a focus on data
+                engineering, machine learning, and analytics. Targeting data roles in FinTech.
               </p>
             </div>
 
