@@ -15,7 +15,7 @@ const socialLinks = [
   { href: 'mailto:tveeraj311@gmail.com',                     label: 'Email',    external: false },
 ];
 
-export default function Footer() {
+export default function Footer({ lighthouseScore }) {
   const scrollTo = (e, href) => {
     e.preventDefault();
     const el = document.querySelector(href);
@@ -135,6 +135,22 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
+        {/* Lighthouse Performance Metrics */}
+        {lighthouseScore && (
+          <div
+            className="mb-10 pt-10"
+            style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+          >
+            <p
+              className="text-xs font-semibold mb-6 tracking-widest uppercase text-center"
+              style={{ color: 'rgba(255,255,255,0.35)' }}
+            >
+              Performance Metrics
+            </p>
+            {lighthouseScore}
+          </div>
+        )}
 
         {/* Bottom row */}
         <div

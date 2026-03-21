@@ -89,7 +89,7 @@ export default function Hero() {
               style={{ transitionDelay: '350ms' }}
             >
               <p className="text-lg font-medium" style={{ color: 'var(--sage)' }}>
-                Data Engineer · ML Enthusiast · Full-Stack Developer
+                Data Professional · Engineer · Scientist · Analyst
               </p>
             </div>
 
@@ -98,9 +98,9 @@ export default function Hero() {
               style={{ transitionDelay: '500ms' }}
             >
               <p className="leading-relaxed" style={{ color: 'var(--text-secondary)', maxWidth: '480px' }}>
-                3rd-year B.Tech CSE student at GRIET, passionate about data engineering, machine learning,
-                and scalable infrastructure. CSI Operations Lead with hands-on experience in ETL pipelines,
-                ML model deployment, and cloud infrastructure.
+                3rd-year B.Tech CSE student at GRIET building scalable data systems. Adobe Hackathon
+                finalist ready for Data Engineer, Data Scientist, or Data Analyst positions in FinTech.
+                Python · SQL · ML · Full-Stack.
               </p>
             </div>
 

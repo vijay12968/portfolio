@@ -12,7 +12,7 @@ const Projects = dynamic(() => import('../components/Projects'), {
   loading: () => <div className="py-28 flex items-center justify-center" style={{ background: '#fafafa' }}><div className="w-6 h-6 border-2 rounded-full animate-spin" style={{ borderColor: 'var(--sage-light)', borderTopColor: 'var(--sage)' }} /></div>,
   ssr: true,
 });
-const Skills = dynamic(() => import('../components/Skills'), {
+const SkillsSection = dynamic(() => import('../components/SkillsSection'), {
   loading: () => <div className="py-28 flex items-center justify-center" style={{ background: '#f5f1ed' }}><div className="w-6 h-6 border-2 rounded-full animate-spin" style={{ borderColor: 'var(--sage-light)', borderTopColor: 'var(--sage)' }} /></div>,
   ssr: true,
 });
@@ -36,6 +36,13 @@ const Contact = dynamic(() => import('../components/Contact'), {
   loading: () => <div className="py-28" style={{ background: '#f0ebe3' }} />,
   ssr: true,
 });
+const PathToFintech = dynamic(() => import('../components/PathToFintech'), {
+  loading: () => <div className="py-28" style={{ background: '#f5f1ed' }} />,
+  ssr: true,
+});
+const LighthouseScore = dynamic(() => import('../components/LighthouseScore'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -44,15 +51,16 @@ export default function Home() {
       <main>
         <Hero />
         <Profile />
+        <PathToFintech />
         <Projects />
-        <Skills />
+        <SkillsSection />
         <Experience />
         <Resume />
         <Education />
         <Certifications />
         <Contact />
       </main>
-      <Footer />
+      <Footer lighthouseScore={<LighthouseScore />} />
     </div>
   );
 }
