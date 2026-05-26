@@ -31,6 +31,14 @@ const resumes = [
     file: '/resumes/Veeraj_2.pdf',
     highlights: ['Leadership', 'Certifications', 'Full Overview'],
   },
+  {
+    id: 'v3',
+    title: 'Latest Version',
+    subtitle: 'Updated Resume',
+    description: 'Most recent resume with latest projects, skills, and achievements. Recommended for all applications.',
+    file: '/resumes/Veeraj_3.pdf',
+    highlights: ['Latest Updates', 'Current Projects', 'Recent Skills'],
+  },
 ];
 
 function ResumeCard({ resume, index, inView }) {
@@ -146,11 +154,11 @@ export default function Resume() {
           <span className="section-label">Documents</span>
           <h2 className="section-heading mt-2">My Resumes</h2>
           <p className="mt-3 max-w-md mx-auto" style={{ color: 'var(--text-secondary)' }}>
-            Two versions tailored to different opportunities. Choose the format that best fits your needs.
+            Three versions tailored to different opportunities. Choose the format that best fits your needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {resumes.map((r, i) => (
             <ResumeCard key={r.id} resume={r} index={i} inView={inView} />
           ))}
