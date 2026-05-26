@@ -38,3 +38,7 @@ yarn-error.log*
 # Cache
 .cache
 *.cache
+
+# Security scanner
+.ship-safe/
+ship-safe-report.html
