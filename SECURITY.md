@@ -463,6 +463,39 @@ This project has **never used Upstash Redis**. The scanner likely detected a pat
 
 ---
 
+### ✅ GitHub Personal Access Token (.env.example)
+
+**Scanner Alert:** ship-safe flagged a GitHub PAT pattern (`ghp_xxx...`) in git commit history  
+**Investigation Date:** 2026-05-26  
+**Status:** ✅ CONFIRMED FALSE POSITIVE - Example Placeholder Only
+
+**Evidence:**
+```bash
+# Historical commit showed placeholder pattern
+$ git show 37fc4ee562:.env.example
+# Result: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (all x's - placeholder pattern)
+
+# Current .env.example uses safer placeholders
+$ cat .env.example
+GITHUB_TOKEN=your_github_token_here
+GITHUB_USERNAME=your_github_username
+```
+
+**Conclusion:**  
+The token pattern flagged in git history was **never a real token**. It was:
+- ✅ Always an example placeholder (ghp_xxx... with all x's)
+- ✅ Never used for actual API calls
+- ✅ Later replaced with clearer placeholder text (`your_github_token_here`)
+- ✅ No actual credentials ever committed to git
+
+**Timeline:**
+- **Past:** Used `ghp_xxxxxxxxxxxx...` as example (triggered scanner)
+- **Current:** Uses `your_github_token_here` (safe, non-pattern placeholder)
+
+**Action Taken:** Documented as false positive. No token rotation needed. Real tokens are stored in `.env` (gitignored) and Vercel environment variables, never committed to git.
+
+---
+
 **Next Audit:** 2026-06-20 (Quarterly)
 **Auditor:** Veeraj Thota
 **Version:** 1.1.0 (Updated: 2026-05-26)
