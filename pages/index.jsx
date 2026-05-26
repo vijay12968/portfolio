@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SiteNavigation from '../components/SiteNavigation';
 import Footer from '../components/Footer';
 import SchemaMarkup from '../components/SchemaMarkup';
+import Resume from '../components/Resume';
 
 const navCards = [
   { href: '/about',      label: 'About',      description: 'Background, approach, and what I\'m currently working on.' },
@@ -91,6 +92,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Resume Section */}
+        <Resume />
       </main>
 
       <Footer />
