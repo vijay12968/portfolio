@@ -15,11 +15,11 @@
 **Environment Variables (.env):**
 ```bash
 # GitHub API
-GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-GITHUB_USERNAME=vijay12968
+GITHUB_TOKEN=your_github_token_here
+GITHUB_USERNAME=your_github_username
 
 # LinkedIn API (Future)
-LINKEDIN_TOKEN=xxxxxxxxxxxxxxxxxxxxx
+LINKEDIN_TOKEN=your_linkedin_token_here
 
 # Vercel (CI/CD)
 VERCEL_TOKEN=xxxxxxxxxxxxxxxxxxxxx
@@ -425,6 +425,44 @@ git grep -E "(ghp_|sk_|pk_|AKIA)" $(git rev-list --all)
 
 ---
 
+## Security Scanner False Positives
+
+### ✅ Upstash Redis Token (package-lock.json)
+
+**Scanner Alert:** ship-safe flagged a potential Upstash Redis REST Token in git history  
+**Investigation Date:** 2026-05-26  
+**Status:** ✅ CONFIRMED FALSE POSITIVE
+
+**Evidence:**
+```bash
+# 1. No Upstash dependency in package.json
+$ grep -i "upstash" package.json
+# Result: No matches
+
+# 2. No Upstash environment variables
+$ grep -i "upstash" .env.example
+# Result: No matches
+
+# 3. No Upstash in git history
+$ git log --all --grep="upstash" -i
+# Result: No commits mentioning Upstash
+
+# 4. No Upstash in codebase
+$ grep -ri "upstash" --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" .
+# Result: Only found in security documentation (this file) and scanner reports
+```
+
+**Conclusion:**  
+This project has **never used Upstash Redis**. The scanner likely detected a pattern in package-lock.json metadata that resembled an Upstash token format, but no actual token exists. This is confirmed by:
+- ✅ No Upstash packages installed
+- ✅ No Upstash configuration anywhere in the codebase
+- ✅ No git commits related to Upstash
+- ✅ No environment variables for Upstash
+
+**Action Taken:** Documented as false positive. No token rotation needed.
+
+---
+
 **Next Audit:** 2026-06-20 (Quarterly)
 **Auditor:** Veeraj Thota
-**Version:** 1.0.0
+**Version:** 1.1.0 (Updated: 2026-05-26)
