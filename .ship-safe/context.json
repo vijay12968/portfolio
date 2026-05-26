@@ -1,0 +1,950 @@
+{
+  "version": "9.3.2",
+  "generatedAt": "2026-05-26T16:30:32.897Z",
+  "rootPath": "C:\\Users\\Veeraj\\OneDrive\\Desktop\\portfolio",
+  "recon": {
+    "frameworks": [
+      "nextjs"
+    ],
+    "languages": [
+      "javascript",
+      "typescript",
+      "python"
+    ],
+    "apiRoutes": [
+      "pages/api/github/repos.js",
+      "pages/api/github/user.js"
+    ],
+    "authPatterns": [],
+    "databases": [],
+    "cloudProviders": [],
+    "frontendExposure": [],
+    "packageManagers": [
+      "npm"
+    ],
+    "cicd": [
+      {
+        "platform": "github-actions",
+        "file": ".github/workflows/ci.yml"
+      }
+    ],
+    "hasDockerfile": false,
+    "hasTerraform": false,
+    "hasKubernetes": false,
+    "envFiles": [
+      ".env",
+      ".env.example"
+    ],
+    "configFiles": [
+      "next.config.js"
+    ]
+  },
+  "fileIndex": {
+    ".env": {
+      "hash": "0b621319ad3900cf3c213de333869aa322cfcda9c104a13ce76fedac036164f4",
+      "size": 258,
+      "lastScanned": "2026-05-26T16:30:32.886Z"
+    },
+    ".env.example": {
+      "hash": "73c55c5a4fdc1eac01411e29003b5d2221fa2390fb6121cdeff04d90b561cdd1",
+      "size": 610,
+      "lastScanned": "2026-05-26T16:30:32.886Z"
+    },
+    ".gitignore": {
+      "hash": "1bc1414d4528036f8128c774e45da51726b3e414de3055b8fc62203305f21eb5",
+      "size": 341,
+      "lastScanned": "2026-05-26T16:30:32.886Z"
+    },
+    ".ship-safeignore": {
+      "hash": "85b35810f0890cb079ecc470c090e20802fb9163c24697f7f7ba961b382af908",
+      "size": 715,
+      "lastScanned": "2026-05-26T16:30:32.886Z"
+    },
+    "ANIMATIONS-COMPLETE.md": {
+      "hash": "c2ce7bf35ffabe4892a34409755753b71b38b095ea4cb7c0e3ea705cd7911d47",
+      "size": 7879,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "ARCHITECTURE.md": {
+      "hash": "b2e167482a96db5db8419be9ac109d2143c099fc6faf4e6eb1705909f562a680",
+      "size": 11232,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "DEPLOYMENT-GUIDE.md": {
+      "hash": "2d492391f7328d699cadfcb5bf04d9154811a6158655208597e417ec4ff23333",
+      "size": 10614,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "DEPLOYMENT-SUCCESS.md": {
+      "hash": "2f5f01a97a94c22566a3dd74be7c228d5d5e9f904a6e07af3afff84bb754a9a6",
+      "size": 8270,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "IMAGE-SETUP-GUIDE.md": {
+      "hash": "08023f8a0af403cfed2339c2fc5d52c258b76a08aa7275829bf742a66f2421e9",
+      "size": 8677,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "MANUAL-SECURITY-ACTIONS.md": {
+      "hash": "6b1158fca088695611f0b7eba8311a09c9200ec5c5513cb276bfc4a86e9ba630",
+      "size": 8762,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "next.config.js": {
+      "hash": "c390044343855ef56738f87e994c9241899d0127399aef9a69c915c6f00595e6",
+      "size": 2932,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "package.json": {
+      "hash": "bda6f4632f4cc3d94b41ec4cdebf40ea5debff3df18531dfd6c6145cae5cb2bc",
+      "size": 1214,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "PERFORMANCE.md": {
+      "hash": "ba6944f3b1186db894a1c04ce7d67ba91469edffe2cb70630a69738eb30d69aa",
+      "size": 9543,
+      "lastScanned": "2026-05-26T16:30:32.887Z"
+    },
+    "PHASE5-SUMMARY.md": {
+      "hash": "25b7c92a26c014dfe039e826602bdcd6fa924d075a64b85568cb978d6531aeb5",
+      "size": 8792,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "postcss.config.js": {
+      "hash": "fa650b380adfabb151a0b352f7135e107e6352345f899060f1c5c231228f94bf",
+      "size": 83,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "PROGRESS-REPORT.md": {
+      "hash": "a2153c078a2ba7782853db9c556bd7ed0c15624d01563bc5e689ba9bfc699304",
+      "size": 11926,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "README.md": {
+      "hash": "af0945145571af19afbd16ad39b622ae919a540fd4def5b6bbb575bacb5eeb38",
+      "size": 10682,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "SECURITY-FIXES.md": {
+      "hash": "777aaa51a743907ffc1fc48c73be37370cdd600e16b1c05d0bda1c09ddcb6ac0",
+      "size": 3638,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "SECURITY-UIUX-UPGRADE.md": {
+      "hash": "bb4d42016095c3baab2c1e6881e9440cb82d052a1211f568bf4015ab94d38573",
+      "size": 14708,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "SECURITY.md": {
+      "hash": "6d2c021b642687d1ce6ee440306bb2b266ee50667abe937de545101a35a668eb",
+      "size": 12531,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "SETUP-COMPLETE.md": {
+      "hash": "343144e2adb9f80ae67d8c15807c76c101a65b54e0a46b61808cb13a1e8a43d4",
+      "size": 4916,
+      "lastScanned": "2026-05-26T16:30:32.888Z"
+    },
+    "STATUS.md": {
+      "hash": "37ad14a3b15f4e3c210785658fa6d7d6645c13d4b5a0d4226ea12504358e60a1",
+      "size": 9760,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    "tailwind.config.js": {
+      "hash": "88ff15ce5ba7ba0955b6ca218ebd2e55e6f39ccd4fd1573aa1a5b8ef4dd6a8da",
+      "size": 3607,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    "TEST-CHECKLIST.md": {
+      "hash": "b33b9ab9ddae793f07eda99dfb17b5094cf21c79bcfd6f88049537f2f56d48cb",
+      "size": 15393,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    "UPGRADE-SUMMARY.md": {
+      "hash": "c73920fe0aab375f48d7e18c01ce0e1d569709e48ceb71fa72dfdf7aedb2eb72",
+      "size": 11828,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    "veeraj_portfolio.html": {
+      "hash": "056862943f72bca1bceaee6759039c9332c24e6d7fa2d463f79a4d3a0268ffb2",
+      "size": 21217,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    ".claude/settings.local.json": {
+      "hash": "4e802988bb7036fa2b7c61bdddf1a4c3af7259edfbf3d699a05dc8d3ea421e90",
+      "size": 2343,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    ".deepsec/.gitignore": {
+      "hash": "1c0d2e85c031cc1a1f2465fde8a27be6aae4944348788494d2871221d72c4998",
+      "size": 206,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    ".deepsec/AGENTS.md": {
+      "hash": "d8e077a5597788fb08e011cb564e5bc1ad39d30ede5157bbe8ee46fc5ecc4f8c",
+      "size": 841,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    ".deepsec/deepsec.config.ts": {
+      "hash": "78e42e4470c113303b4ba9e1035bcce92f4832a79fc51bfd1c3c8786e8f66c63",
+      "size": 177,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    ".deepsec/package.json": {
+      "hash": "665b298ca9ab891b40077303acf86d7151019f2ee580e7387b3b392b554be14b",
+      "size": 247,
+      "lastScanned": "2026-05-26T16:30:32.889Z"
+    },
+    ".deepsec/pnpm-workspace.yaml": {
+      "hash": "b379483d4293500af8e9d3e8d83b4b5a2ad1e844911cd7be7f7e274e4bb80666",
+      "size": 13,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    ".deepsec/README.md": {
+      "hash": "e597f138f3e98f7e04dc18f894ecfcb5686e36b27f0e6663f27e4807a7873388",
+      "size": 2621,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Arsenal.jsx": {
+      "hash": "a35497488357a4ac2de466af1e17a319e199b4d00e68c1ccf53200e8b038a549",
+      "size": 4432,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Breadcrumb.jsx": {
+      "hash": "39e4bd7de16c54f93feea7895dc23a344f91877062d0e668390257951ad08e18",
+      "size": 1771,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/CareerTimeline.jsx": {
+      "hash": "07ec3538e7eff2f99b5e7b5e539b450c7d5527354255a0702e461754c12e9891",
+      "size": 5869,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Certifications.jsx": {
+      "hash": "3acf6d978865bfc0515196dc2008d6ae9a8cfc1bc40d2b0fdcd0afe08153c149",
+      "size": 7838,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Contact.jsx": {
+      "hash": "913d20d32c285171da8154f802016c713fe27ff84f9a4399f0e77a21e01d8441",
+      "size": 12028,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Education.jsx": {
+      "hash": "78be54f42c96902d7e501d413de4302a46d274c8c6ee83029d5065f21e32ecd9",
+      "size": 7295,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Experience.jsx": {
+      "hash": "5399458011cd4f2d5cdc1b2bf7eda68c76c23cbacf004caa07bc19d71ef9833b",
+      "size": 16245,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Footer.jsx": {
+      "hash": "684d9f4a9f28999ce24bc7f7b1c92cd7bca247e67d7cef814f5bf73e15139847",
+      "size": 7014,
+      "lastScanned": "2026-05-26T16:30:32.890Z"
+    },
+    "components/Hero.jsx": {
+      "hash": "aa865a0afb23d257a68f7dc28a641a05842bf475a7526b1f4e59ad9960a08cc3",
+      "size": 7312,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/LighthouseScore.jsx": {
+      "hash": "8b7cca15af2ecbb4c208b17e94c26f11b9e05a9a329a4527ccde3a2292edd559",
+      "size": 4250,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/LoadingSpinner.jsx": {
+      "hash": "2fed64f09c561da3c2f80e0bebcceabc26b561752ee4420751a07181c846be11",
+      "size": 526,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/Navigation.jsx": {
+      "hash": "1a4ef24376a8912b778063cb3399e78c227f3ba505d8182ca19d845c8812b510",
+      "size": 4140,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/PageLayout.jsx": {
+      "hash": "a02eb3a1499cfa95d31c2998861cec3b9385225555222f7dadde24d63c4a5f14",
+      "size": 624,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/PathToFintech.jsx": {
+      "hash": "a88a67870ce22bfce48011e5b024e72f9af98c58567479002038483f8aa8c8fb",
+      "size": 17071,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/Profile.jsx": {
+      "hash": "c11e40c5945e7fba940876cd8e2db5f65c99d7aec20ef00fa17b44c63c79662a",
+      "size": 6022,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/Projects.jsx": {
+      "hash": "e3aa0b61a2010bad9be4b3d97d25a9c766d1e1acab22cc8e7191ccacae37bfab",
+      "size": 7219,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/Resume.jsx": {
+      "hash": "de379bfa32959ba7ce56c7778565eee954330e086101cb1b94049b2bf80a36e9",
+      "size": 6564,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/SchemaMarkup.jsx": {
+      "hash": "940c9a4130939f3e1bbbf2ef0c7aa6bdcaf6b46cf4d1ee02cf2833fd7cca5191",
+      "size": 1548,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/ScrollProgress.jsx": {
+      "hash": "31c3ee801daacd732e5eb2be8c0183c3ab5b33c2d6d8361a9d5cf4f0cdd94ea1",
+      "size": 1752,
+      "lastScanned": "2026-05-26T16:30:32.891Z"
+    },
+    "components/SiteNavigation.jsx": {
+      "hash": "083f562b2f9c78b4907eb5b5bae9b16b1bb798607f610cf6566d49d147cfcfb4",
+      "size": 5495,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/Skills.jsx": {
+      "hash": "22f2cc4b2aeb4332d8c5bf2a3442bda0999dc2f1d2385337c0a67ce693caceda",
+      "size": 4842,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/SkillsGrid.jsx": {
+      "hash": "e8af0f0636223b53804551880bf8e47c3cf21f32887e8c00f5886c4e780f127c",
+      "size": 4964,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/SkillsSection.jsx": {
+      "hash": "093a330f096c5e71ead6546a2b26bd6dda6045d0f0b9a957a58587af796905a1",
+      "size": 7248,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/Testimonial.jsx": {
+      "hash": "5825bed7704ab2990476c6ae56d49c53cb7f97efb8b8d9b6534b3b416de3fdfc",
+      "size": 2378,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/ThemeToggle.jsx": {
+      "hash": "5029dcb8daa16bc4377e3a71343ea76327a4f9b8663c741f347f52dd98097eb4",
+      "size": 2392,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/TimelineComponent.jsx": {
+      "hash": "be337d9708c9d32c07bac4985e9636404ad6cfa0572885945ce919b2db4f33d0",
+      "size": 12529,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "components/Toast.jsx": {
+      "hash": "35b807b2fd569ee354c2d04f99f82884cd2cb746772f386d3101d8792c8f0076",
+      "size": 1691,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "data/experience.js": {
+      "hash": "7ba0cb5045713ff7d0804fe3fe76c1e538874c310fb7e033c6389b77d81bf48a",
+      "size": 9430,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "data/projects.js": {
+      "hash": "e44fa2ad2897ba18d12c7d5d5ff511933f466a1dba9404bd3fa7dceb1991c09b",
+      "size": 11702,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "pages/about.jsx": {
+      "hash": "422e513f5592d3ac3feb4dfb0cfd7dd2cd4a7e794c48ba0a067efcc85c25baf7",
+      "size": 7481,
+      "lastScanned": "2026-05-26T16:30:32.892Z"
+    },
+    "pages/contact.jsx": {
+      "hash": "f91f7450792300a6c7ddb96bb43aeffd26bf9bfa9fea4d89eab9384c28497edd",
+      "size": 6931,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "pages/education.jsx": {
+      "hash": "6a89d7ad769cdb0e185292ff1c3f678c940cb729d73fba7fee60438a77eb68b5",
+      "size": 4368,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "pages/index.jsx": {
+      "hash": "49e05536aa90a881d1e70e9942fd93fc579058d87824cdf851adbd268af469ee",
+      "size": 5735,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "pages/_app.jsx": {
+      "hash": "86482edcc159cb812e8a9a8004be8c343fb4a0a9a8eb11e6b79f8d18671e9af6",
+      "size": 298,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "pages/_document.jsx": {
+      "hash": "b2a0fcceea7f05e46413e047c46997671be9ed7478fecf4d8aab9405c77e2925",
+      "size": 3415,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "public/README-IMAGE.txt": {
+      "hash": "9654e74ed9ca84215ee54f197a2ae67fb7246cc568a88b7baf3ab05be9b52c8c",
+      "size": 506,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "utils/api.js": {
+      "hash": "93a90e65ce5ba3b55a44a1ddd9ab102fff0138141efa56c37671163cc47f7d7f",
+      "size": 4871,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "utils/cache.js": {
+      "hash": "aae32fe9b01872eb410f9387c54068486583753c718685b92c72717cade78421",
+      "size": 3431,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "utils/constants.js": {
+      "hash": "7b2756080fabeeca51809dbfa9fc2de806cdae10c6e1bab52926ec129059eb42",
+      "size": 1262,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "utils/performance.js": {
+      "hash": "54f6645f313f9cb705472009b1c7e01f8f759608aef65d15c93465aba79c42ce",
+      "size": 5266,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "utils/security.js": {
+      "hash": "c2ef06f01477788f610c8cd4e8d4536aad3858a7ca203b43fdeb70045cd350c4",
+      "size": 2312,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "tests/lighthouse-test.js": {
+      "hash": "fd5eca13b93a63b946d3bb47317812f770ef5739776cbacb588b5b2c8a24421a",
+      "size": 669,
+      "lastScanned": "2026-05-26T16:30:32.893Z"
+    },
+    "tests/load-test.js": {
+      "hash": "0754dbb2004e526a238176263626a4e5c5994c58c4d503c39345652f47449c91",
+      "size": 2452,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "styles/globals.css": {
+      "hash": "85837be325fbe689a535055ce2e76d4c3fa96dd6e12faa653ffaeff5176f9377",
+      "size": 10902,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    ".github/workflows/ci.yml": {
+      "hash": "8cadd80aed40f13f5eca8f13163f44916f63ffab255e00c937b824b59a61290a",
+      "size": 6639,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "design-system/veeraj-thota-portfolio/MASTER.md": {
+      "hash": "51e8e7ff0edba128c056bb8c5ed98700477e73dc8371dd8bb3b9ea676a905571",
+      "size": 5298,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/about/career-journey.jsx": {
+      "hash": "19d92c8b17b123db15410057e88f83fc0433cbf53211cae6a314105b8fb3666b",
+      "size": 8047,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/projects/index.jsx": {
+      "hash": "670a0ae2b5813941f8dc98daabda7f64d4fc9fe518e1f6633294a6a693e24fbd",
+      "size": 5846,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/projects/[slug].jsx": {
+      "hash": "44e995dfac46bc84bc9c7f97ebd2ead33460bd77b0fa3ac559d89c97d400ac3f",
+      "size": 9062,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/experience/index.jsx": {
+      "hash": "532960a3dce0ad8aad9ce675b3f08938183349709d3260a5fe6dc48248df40b4",
+      "size": 3366,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/experience/[slug].jsx": {
+      "hash": "f814371c1806920d37e7f955548a1b6053c2b47657fe6562af8fb4679c98bf7b",
+      "size": 6577,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/skills/index.jsx": {
+      "hash": "fba4eefab317ba2e7f25777c9fe64d10688fcd1275c2563c0d23e13562ed6eff",
+      "size": 7306,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "pages/skills/learning-path.jsx": {
+      "hash": "181b255a7bbafefd6016dd6f564e81f33ecbfb2094c2bc6f6a1b4e3bfa4ecc7b",
+      "size": 7772,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    "public/downloads/Veeraj_Quick_Profile.html": {
+      "hash": "839e8ffd7fbce88b1049dbcbc42a3b71caefd5fc505d0b1c8eb1fd914a5baa74",
+      "size": 11250,
+      "lastScanned": "2026-05-26T16:30:32.894Z"
+    },
+    ".claude/skills/ui-ux-pro-max/SKILL.md": {
+      "hash": "07b87b8998b51b9c234df031e31aa2a85cf86abeaa05efd984c2f66ca7f06d68",
+      "size": 14105,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".deepsec/data/portfolio/INFO.md": {
+      "hash": "12888270b03d7526f60b2b696b392502c86b2934844f0e2a64ff2f18bd8d4ee7",
+      "size": 890,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".deepsec/data/portfolio/project.json": {
+      "hash": "30b76546e68a6bee5ce7026a11d7dfdd8604812dbf42a385673221d3f9946ebd",
+      "size": 207,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".deepsec/data/portfolio/SETUP.md": {
+      "hash": "7763e7c358997981a446a698bb80718077762c76d94e99d61d0fc1128f00fa84",
+      "size": 2286,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    "pages/api/github/repos.js": {
+      "hash": "d75828f8e7f99ba63ed86f6fa675bd77232dece8da5ca2554bd89fece99ef2c6",
+      "size": 3511,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    "pages/api/github/user.js": {
+      "hash": "e361b7772a912a6e4f3ccd48d77f1b569de5e954f7c7b5304f8c658f9baff89d",
+      "size": 2906,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/charts.csv": {
+      "hash": "b754c0efffcf54cb889114a9314be1d5af6ceebe65c4c436d713b52018e752c9",
+      "size": 7654,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/colors.csv": {
+      "hash": "4cc0df2785f340b8bd0ace50bd4068dc13a7c4c6fa4d9d2723271244ce904614",
+      "size": 9713,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/icons.csv": {
+      "hash": "351fe61ba45b8146c66de6ea7d67297654639d79a94f537b4d0bad570058c28f",
+      "size": 13384,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/landing.csv": {
+      "hash": "010e1e46db271b94e0af6f18973bea86ddba62feeccd62aeeaa6ed40e2ae2db1",
+      "size": 14390,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/products.csv": {
+      "hash": "5359e3037dcb84e99c792ea13dd44f5b78ab6a53557afb309cf19140512aaf5b",
+      "size": 29790,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/react-performance.csv": {
+      "hash": "904c8afcda229629545912dde0e8ac37503757131f0169f80b016f1f58c4fd3f",
+      "size": 14822,
+      "lastScanned": "2026-05-26T16:30:32.895Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/styles.csv": {
+      "hash": "ad3c3236134d833bda01a2faf31ddeaaa1dbd5005fa430dec571fa91b26e5fea",
+      "size": 96553,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/typography.csv": {
+      "hash": "64695e05ac335ba534aff396c4ba9241c642f80ea53b424251d2669b71c4772b",
+      "size": 31877,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/ui-reasoning.csv": {
+      "hash": "58fc52fff69f62709f8c7dd460de6f6693699ea820f24287f3301a427c2b554e",
+      "size": 31071,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/ux-guidelines.csv": {
+      "hash": "1870ee048f2a2bdd60709f8f7adf7f3b6dcad560bc005c8b2915a8ac8639820d",
+      "size": 18766,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/web-interface.csv": {
+      "hash": "10bfc24e09a6a15db8309e6ef9b6881e1d4af97dffb7c99418aefb8e30df7d54",
+      "size": 7472,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/scripts/core.py": {
+      "hash": "5459d1f04eea03dfb913742d0c03edc5065ac67f6227e4807fa87699662588cb",
+      "size": 10227,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/scripts/design_system.py": {
+      "hash": "4da1d341f3c7749df51b51db4a543a48a427c3c746eb0e9882a1ab86acf3bb54",
+      "size": 43614,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/scripts/search.py": {
+      "hash": "a449e57060ef5134e98e62fd11f6e240153afd68c27dab89cbb72a3ce55f1498",
+      "size": 5478,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/astro.csv": {
+      "hash": "ad18dae3ab6d148d37d144592df80dc1825b6c9e86d9d2d68fdda77434206a37",
+      "size": 11868,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/flutter.csv": {
+      "hash": "e470e6bc2bcd8562667cc764d1e1afb0be0a30ca4dc9ec12fa18b19d46f156bd",
+      "size": 10469,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv": {
+      "hash": "1f004891dd189f6bc2a7717401e3100244326e7e2f3963a79bf7b2349d85e091",
+      "size": 11361,
+      "lastScanned": "2026-05-26T16:30:32.896Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv": {
+      "hash": "6c8fd4b0391c342c12b0af15610cd5becbeccaef0bbe8dcfc01d928c3195d93e",
+      "size": 8195,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv": {
+      "hash": "06a8e8c13bd44696c6ebb4cb6c4d8dea440e3de8cce77616512529ed29258f0c",
+      "size": 12546,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv": {
+      "hash": "05d6e74501b2b6a636faed32450622759f49a5bcafad971f5f4e7eba0eb7be71",
+      "size": 14010,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv": {
+      "hash": "f7a3f2d9542856d00199f85c6c023b7c284cc698e2e6e12d61afce2edacb24d6",
+      "size": 16539,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/react-native.csv": {
+      "hash": "a08ca77fcf6b6d9531982dce465366296013bfcf12d2938ac72ad57cf0c4f085",
+      "size": 10035,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/react.csv": {
+      "hash": "b6e3eb0e4c9c01bd00ffb951d5ca224a19d488b4544c75436f48cf92ff12bf45",
+      "size": 13016,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv": {
+      "hash": "395c2e415ef6f48a474acccdc8eb2c7258a6ed751a5037ba171a2d8823e02ded",
+      "size": 15921,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/svelte.csv": {
+      "hash": "bc8d158994a8bdf412830a9dd5e5a5534edd2f367a6e50e0ebd4d76f592dfa3f",
+      "size": 11063,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv": {
+      "hash": "e87cb9eee208bb753bdab96d4a261c7f830c4317ee90ec098316b248fc32be85",
+      "size": 10872,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    },
+    ".claude/skills/ui-ux-pro-max/data/stacks/vue.csv": {
+      "hash": "9b793c3f4eec85f77a758c09322f2b62f3b3ca549bb713ccf0849ef885934395",
+      "size": 11056,
+      "lastScanned": "2026-05-26T16:30:32.897Z"
+    }
+  },
+  "lastFindings": {
+    "SECURITY.md": [
+      {
+        "line": 476,
+        "column": 11,
+        "severity": "critical",
+        "category": "secret",
+        "rule": "GitHub Personal Access Token",
+        "title": "GitHub Personal Access Token",
+        "description": "GitHub PATs can access repositories, create commits, and manage settings.",
+        "matched": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "confidence": "high",
+        "fix": "Move to environment variable or secrets manager"
+      },
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "critical",
+        "category": "history",
+        "rule": "GIT_HISTORY_SECRET",
+        "title": "Historical Secret: GitHub Personal Access Token",
+        "description": "Secret was removed from code but still exists in git history (commit 42fcdf34e3, Tue May 26 22:00:28 2026 +0530). Anyone with repo access can retrieve it.",
+        "matched": "ghp_xxxx***xxxx",
+        "confidence": "low",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Rotate this credential immediately, then clean history: npx bfg --replace-text passwords.txt"
+      }
+    ],
+    "MANUAL-SECURITY-ACTIONS.md": [
+      {
+        "line": 59,
+        "column": 7,
+        "severity": "critical",
+        "category": "secret",
+        "rule": "GitHub Personal Access Token",
+        "title": "GitHub Personal Access Token",
+        "description": "GitHub PATs can access repositories, create commits, and manage settings.",
+        "matched": "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "confidence": "high",
+        "fix": "Move to environment variable or secrets manager"
+      }
+    ],
+    "package-lock.json": [
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "critical",
+        "category": "history",
+        "rule": "GIT_HISTORY_SECRET",
+        "title": "Historical Secret: Upstash Redis REST Token",
+        "description": "Secret was removed from code but still exists in git history (commit 37fc4ee562, Fri Mar 20 12:38:20 2026 +0530). Anyone with repo access can retrieve it.",
+        "matched": "AXDGk8PF***inhr",
+        "confidence": "medium",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Rotate this credential immediately, then clean history: npx bfg --replace-text passwords.txt"
+      }
+    ],
+    "package.json": [
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "high",
+        "category": "supply-chain",
+        "rule": "TYPOSQUAT_SUSPECT",
+        "title": "Possible Typosquat: \"next\" (similar to \"nuxt\")",
+        "description": "Package \"next\" is 1 character(s) away from popular package \"nuxt\". This could be a typosquatting attempt.",
+        "matched": "next",
+        "confidence": "medium",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Verify this is the intended package. Did you mean \"nuxt\"?"
+      },
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "low",
+        "category": "supply-chain",
+        "rule": "UNUSED_DEPENDENCY",
+        "title": "Unused Dependency: framer-motion",
+        "description": "\"framer-motion\" is in dependencies but never imported in project code. Unused dependencies increase attack surface.",
+        "matched": "framer-motion",
+        "confidence": "low",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Remove if unused: npm uninstall framer-motion"
+      },
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "high",
+        "category": "supply-chain",
+        "rule": "TYPOSQUAT_SUSPECT",
+        "title": "Possible Typosquat: \"next\" (similar to \"nuxt\")",
+        "description": "Package \"next\" is 1 character(s) away from popular package \"nuxt\". This could be a typosquatting attempt.",
+        "matched": "next",
+        "confidence": "medium",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Verify this is the intended package. Did you mean \"nuxt\"?"
+      },
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "low",
+        "category": "supply-chain",
+        "rule": "UNUSED_DEPENDENCY",
+        "title": "Unused Dependency: framer-motion",
+        "description": "\"framer-motion\" is in dependencies but never imported in project code. Unused dependencies increase attack surface.",
+        "matched": "framer-motion",
+        "confidence": "low",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Remove if unused: npm uninstall framer-motion"
+      }
+    ],
+    ".github/workflows/ci.yml": [
+      {
+        "line": 178,
+        "column": 13,
+        "severity": "high",
+        "category": "cicd",
+        "rule": "CICD_NO_LOCKFILE_INSTALL",
+        "title": "CI/CD: Install Without Lockfile",
+        "description": "CI runs npm install without --frozen-lockfile. Builds are non-deterministic.",
+        "matched": "npm install",
+        "confidence": "low",
+        "cwe": "CWE-829",
+        "owasp": "CICD-SEC-3",
+        "fix": "Use npm ci (not npm install) or yarn --frozen-lockfile in CI"
+      },
+      {
+        "line": 111,
+        "column": 11,
+        "severity": "high",
+        "category": "supply-chain",
+        "rule": "MCP_TOKEN_FORWARD_ENV",
+        "title": "MCP: Agent Tool Forwards Auth Token to Third-Party URL",
+        "description": "A high-value credential is set in an MCP server or agent tool configuration. If the tool server URL points to a third-party host, this credential will be transmitted to that host on every tool call — the data exfiltration vector exploited in the April 2026 Vercel incident where compromised AI integrations forwarded Vercel deployment tokens.",
+        "matched": "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }",
+        "confidence": "medium",
+        "cwe": "CWE-200",
+        "owasp": "ASI-09",
+        "fix": "Never pass production credentials to third-party MCP servers. Use scoped, read-only tokens. Prefer official first-party integrations."
+      },
+      {
+        "line": 149,
+        "column": 11,
+        "severity": "high",
+        "category": "supply-chain",
+        "rule": "MCP_TOKEN_FORWARD_ENV",
+        "title": "MCP: Agent Tool Forwards Auth Token to Third-Party URL",
+        "description": "A high-value credential is set in an MCP server or agent tool configuration. If the tool server URL points to a third-party host, this credential will be transmitted to that host on every tool call — the data exfiltration vector exploited in the April 2026 Vercel incident where compromised AI integrations forwarded Vercel deployment tokens.",
+        "matched": "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }",
+        "confidence": "medium",
+        "cwe": "CWE-200",
+        "owasp": "ASI-09",
+        "fix": "Never pass production credentials to third-party MCP servers. Use scoped, read-only tokens. Prefer official first-party integrations."
+      }
+    ],
+    "utils/cache.js": [
+      {
+        "line": 22,
+        "column": 37,
+        "severity": "high",
+        "category": "api",
+        "rule": "API_UPLOAD_NO_TYPE_CHECK",
+        "title": "API: File Upload Without Type Validation",
+        "description": "File upload using original filename without type validation.",
+        "matched": "filename)",
+        "confidence": "low",
+        "cwe": "CWE-434",
+        "owasp": "A04:2021",
+        "fix": "Validate file extension and MIME type. Generate random filenames for storage."
+      },
+      {
+        "line": 59,
+        "column": 37,
+        "severity": "high",
+        "category": "api",
+        "rule": "API_UPLOAD_NO_TYPE_CHECK",
+        "title": "API: File Upload Without Type Validation",
+        "description": "File upload using original filename without type validation.",
+        "matched": "filename)",
+        "confidence": "low",
+        "cwe": "CWE-434",
+        "owasp": "A04:2021",
+        "fix": "Validate file extension and MIME type. Generate random filenames for storage."
+      },
+      {
+        "line": 88,
+        "column": 37,
+        "severity": "high",
+        "category": "api",
+        "rule": "API_UPLOAD_NO_TYPE_CHECK",
+        "title": "API: File Upload Without Type Validation",
+        "description": "File upload using original filename without type validation.",
+        "matched": "filename)",
+        "confidence": "low",
+        "cwe": "CWE-434",
+        "owasp": "A04:2021",
+        "fix": "Validate file extension and MIME type. Generate random filenames for storage."
+      }
+    ],
+    "data/projects.js": [
+      {
+        "line": 18,
+        "column": 15,
+        "severity": "medium",
+        "category": "llm",
+        "rule": "RAG_EMBEDDING_IN_RESPONSE",
+        "title": "RAG: Raw Embeddings Returned to Client",
+        "description": "Raw embedding vectors returned in API responses. Research shows embeddings can be inverted to recover original text, leaking private data.",
+        "matched": "vectorization with FAISS indexing for sub-100ms query response",
+        "confidence": "low",
+        "cwe": "CWE-200",
+        "owasp": "A01:2021",
+        "fix": "Never return raw embedding vectors in API responses. Embeddings should remain server-side only."
+      }
+    ],
+    "components/Contact.jsx": [
+      {
+        "line": 103,
+        "column": 32,
+        "severity": "medium",
+        "category": "config",
+        "rule": "PII_EMAIL_HARDCODED",
+        "title": "Privacy: Real Email Address Hardcoded",
+        "description": "Real email address hardcoded in source code (not @example.com). May be PII or a credential.",
+        "matched": "'veerajthota42@gmail.com'",
+        "confidence": "low",
+        "cwe": "CWE-312",
+        "owasp": "A02:2021",
+        "fix": "Use @example.com for test emails. Store real emails in environment variables or config."
+      },
+      {
+        "line": 202,
+        "column": 33,
+        "severity": "medium",
+        "category": "config",
+        "rule": "PII_EMAIL_HARDCODED",
+        "title": "Privacy: Real Email Address Hardcoded",
+        "description": "Real email address hardcoded in source code (not @example.com). May be PII or a credential.",
+        "matched": "\"your@email.com\"",
+        "confidence": "low",
+        "cwe": "CWE-312",
+        "owasp": "A02:2021",
+        "fix": "Use @example.com for test emails. Store real emails in environment variables or config."
+      }
+    ],
+    "components/SchemaMarkup.jsx": [
+      {
+        "line": 24,
+        "column": 12,
+        "severity": "medium",
+        "category": "config",
+        "rule": "PII_EMAIL_HARDCODED",
+        "title": "Privacy: Real Email Address Hardcoded",
+        "description": "Real email address hardcoded in source code (not @example.com). May be PII or a credential.",
+        "matched": "\"tveeraj311@gmail.com\"",
+        "confidence": "low",
+        "cwe": "CWE-312",
+        "owasp": "A02:2021",
+        "fix": "Use @example.com for test emails. Store real emails in environment variables or config."
+      }
+    ],
+    "pages/_document.jsx": [
+      {
+        "line": 16,
+        "column": 10,
+        "severity": "medium",
+        "category": "config",
+        "rule": "PII_EMAIL_HARDCODED",
+        "title": "Privacy: Real Email Address Hardcoded",
+        "description": "Real email address hardcoded in source code (not @example.com). May be PII or a credential.",
+        "matched": "\"tveeraj311@gmail.com\"",
+        "confidence": "low",
+        "cwe": "CWE-312",
+        "owasp": "A02:2021",
+        "fix": "Use @example.com for test emails. Store real emails in environment variables or config."
+      }
+    ],
+    ".env.example": [
+      {
+        "line": 0,
+        "column": 0,
+        "severity": "critical",
+        "category": "history",
+        "rule": "GIT_HISTORY_SECRET",
+        "title": "Historical Secret: GitHub Personal Access Token",
+        "description": "Secret was removed from code but still exists in git history (commit 37fc4ee562, Fri Mar 20 12:38:20 2026 +0530). Anyone with repo access can retrieve it.",
+        "matched": "ghp_xxxx***xxxx",
+        "confidence": "medium",
+        "cwe": null,
+        "owasp": null,
+        "fix": "Rotate this credential immediately, then clean history: npx bfg --replace-text passwords.txt"
+      }
+    ]
+  },
+  "stats": {
+    "totalFiles": 120,
+    "totalFindings": 20,
+    "lastScore": 58.9,
+    "lastGrade": "D"
+  }
+}

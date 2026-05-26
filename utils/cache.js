@@ -8,13 +8,24 @@ import { CACHE_DIR, CACHE_TTL } from './constants';
  */
 
 /**
+ * Sanitize cache key to prevent path traversal attacks
+ * @param {string} key - Cache key
+ * @returns {string} Sanitized key
+ */
+function sanitizeCacheKey(key) {
+  // Remove any path separators and ensure alphanumeric with hyphens/underscores only
+  return key.replace(/[^a-zA-Z0-9_-]/g, '_');
+}
+
+/**
  * Get cached data if valid (not expired)
  * @param {string} key - Cache key (filename)
  * @returns {object|null} Cached data or null if expired/missing
  */
 export async function getCachedData(key) {
   try {
-    const cacheFilePath = path.join(process.cwd(), CACHE_DIR, `${key}.json`);
+    const sanitizedKey = sanitizeCacheKey(key);
+    const cacheFilePath = path.join(process.cwd(), CACHE_DIR, `${sanitizedKey}.json`);
 
     // Check if cache file exists
     if (!fs.existsSync(cacheFilePath)) {
@@ -50,8 +61,9 @@ export async function getCachedData(key) {
  */
 export async function setCachedData(key, data) {
   try {
+    const sanitizedKey = sanitizeCacheKey(key);
     const cacheDir = path.join(process.cwd(), CACHE_DIR);
-    const cacheFilePath = path.join(cacheDir, `${key}.json`);
+    const cacheFilePath = path.join(cacheDir, `${sanitizedKey}.json`);
 
     // Ensure cache directory exists
     if (!fs.existsSync(cacheDir)) {
@@ -77,7 +89,8 @@ export async function setCachedData(key, data) {
  */
 export async function clearCache(key) {
   try {
-    const cacheFilePath = path.join(process.cwd(), CACHE_DIR, `${key}.json`);
+    const sanitizedKey = sanitizeCacheKey(key);
+    const cacheFilePath = path.join(process.cwd(), CACHE_DIR, `${sanitizedKey}.json`);
 
     if (fs.existsSync(cacheFilePath)) {
       fs.unlinkSync(cacheFilePath);

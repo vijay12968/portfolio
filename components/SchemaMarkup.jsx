@@ -32,10 +32,17 @@ const SchemaMarkup = () => {
     },
   };
 
+  // Safe JSON-LD: data is static and JSON.stringify escapes all special chars
+  const safeJsonLd = JSON.stringify(personSchema)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e');
+
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      // eslint-disable-next-line react/no-danger
+      // SAFE: Static JSON-LD schema, no user input, escaped with JSON.stringify + Unicode escaping
+      dangerouslySetInnerHTML={{ __html: safeJsonLd }} // ship-safe-ignore XSS static data only
     />
   );
 };

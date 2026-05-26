@@ -47,6 +47,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formState;
+    // ship-safe-ignore PII - public contact email, intentionally displayed
     const mailto = `mailto:veerajthota42@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
     window.location.href = mailto;
     setSubmitted(true);
@@ -98,6 +99,7 @@ export default function Contact() {
               <div>
                 <div className="text-xs font-semibold tracking-widest uppercase mb-0.5" style={{ color: 'var(--sage)' }}>Email</div>
                 <div className="text-sm font-medium" style={{ color: 'var(--charcoal)' }}>
+                  {/* ship-safe-ignore PII - public contact email */}
                   {showEmail ? 'veerajthota42@gmail.com' : 'Click to reveal address'}
                 </div>
               </div>

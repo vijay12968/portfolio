@@ -22,6 +22,14 @@ const personSchema = {
 };
 
 export default function Document() {
+  // Safe JSON-LD: data is static and JSON.stringify escapes all special chars
+  const safeJsonLd = JSON.stringify(personSchema)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e');
+
+  // Safe theme script: static code with no user input
+  const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){console.error('Theme init error:',e)}})()`;
+
   return (
     <Html lang="en">
       <Head>
@@ -41,11 +49,15 @@ export default function Document() {
         <meta name="theme-color" content="#ffffff" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          // eslint-disable-next-line react/no-danger
+          // SAFE: Static JSON-LD schema, no user input, escaped with JSON.stringify + Unicode escaping
+          dangerouslySetInnerHTML={{ __html: safeJsonLd }} // ship-safe-ignore XSS static data only
         />
       </Head>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})()` }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        {/* SAFE: Static theme initialization script, no user input */}
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} /> {/* ship-safe-ignore XSS static script */}
         <Main />
         <NextScript />
       </body>

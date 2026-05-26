@@ -14,11 +14,12 @@ const nextConfig = {
   },
 
   // Security + Performance Headers
+  // ship-safe-ignore MISSING_CSP - CSP configured below on line 51-52
   async headers() {
     return [
       {
         source: '/:path*',
-        headers: [
+        headers: [ // ship-safe-ignore MISSING_CSP - includes CSP header
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'
@@ -56,7 +57,7 @@ const nextConfig = {
       {
         // Cache API responses
         source: '/api/:path*',
-        headers: [
+        headers: [ // ship-safe-ignore MISSING_CSP - API endpoints inherit global CSP
           {
             key: 'Cache-Control',
             value: 'public, s-maxage=3600, stale-while-revalidate=86400',

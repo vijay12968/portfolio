@@ -34,7 +34,17 @@
       "Bash(node -e \"const p=require\\(''''./package.json''''\\); console.log\\(''''next:'''',p.dependencies.next,''''react:'''',p.dependencies.react,''''framer:'''',p.dependencies[''''framer-motion'''']\\);\")",
       "Bash(node -e \":*)",
       "Bash(node -e \"const p=require\\(''./package.json''\\); console.log\\(''next version:'', p.dependencies.next\\);\")",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "PowerShell(npx ship-safe)",
+      "PowerShell(npx ship-safe audit .)",
+      "PowerShell(npx ship-safe audit . --deep)",
+      "PowerShell(npx ship-safe red-team .)",
+      "PowerShell(npm audit *)",
+      "PowerShell(npm install *)",
+      "PowerShell(npx ship-safe scan .)",
+      "PowerShell(grep *)",
+      "Bash(git log *)",
+      "PowerShell(Select-String *)"
     ]
   }
 }

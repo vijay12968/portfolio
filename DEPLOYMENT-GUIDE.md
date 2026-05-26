@@ -47,8 +47,8 @@ Before we deploy, let's verify everything is ready:
    ```bash
    # Open .env in editor
    # Replace "your_token_here" with your actual token
-   GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   GITHUB_USERNAME=vijay12968
+   GITHUB_TOKEN=your_github_token_here
+   GITHUB_USERNAME=your_github_username
    ```
 
 ### Option B: Use Existing Token
@@ -222,7 +222,7 @@ git push -u origin main
 
 2. **Add variable:**
    - Name: `GITHUB_TOKEN`
-   - Value: `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` (your actual token)
+   - Value: `your_github_token_here` (your actual token)
    - Environment: **Production, Preview, Development** (check all)
 
 3. **Add second variable:**

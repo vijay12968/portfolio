@@ -14,7 +14,14 @@ export default function Testimonial() {
                 className="w-full h-auto rounded-lg shadow-lg"
                 onError={(e) => {
                   e.target.style.display = 'none';
-                  e.target.parentElement.innerHTML = '<div class="w-full aspect-square bg-gray-200 rounded-lg flex items-center justify-center"><span class="text-gray-400">Profile Photo</span></div>';
+                  const parent = e.target.parentElement;
+                  const fallback = document.createElement('div');
+                  fallback.className = 'w-full aspect-square bg-gray-200 rounded-lg flex items-center justify-center';
+                  const span = document.createElement('span');
+                  span.className = 'text-gray-400';
+                  span.textContent = 'Profile Photo';
+                  fallback.appendChild(span);
+                  parent.appendChild(fallback);
                 }}
               />
             </div>

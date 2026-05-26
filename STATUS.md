@@ -169,11 +169,11 @@ Dependencies:           8        ✅ Minimal
 ### Environment Variables Required
 ```bash
 # .env (create from .env.example)
-GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-GITHUB_USERNAME=vijay12968
+GITHUB_TOKEN=your_github_token_here
+GITHUB_USERNAME=your_github_username
 
 # Optional (future)
-LINKEDIN_TOKEN=xxxxxxxxxxxxxxxxxxxxx
+LINKEDIN_TOKEN=your_linkedin_token_here
 VERCEL_TOKEN=xxxxxxxxxxxxxxxxxxxxx
 ```
 

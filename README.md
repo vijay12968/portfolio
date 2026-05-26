@@ -167,8 +167,8 @@ Frontend renders ProjectCard components
    - Select scope: `public_repo` (read public repositories only)
    - Copy token to `.env`:
    ```bash
-   GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-   GITHUB_USERNAME=vijay12968
+   GITHUB_TOKEN=your_github_token_here
+   GITHUB_USERNAME=your_github_username
    ```
 
 5. **Run development server**

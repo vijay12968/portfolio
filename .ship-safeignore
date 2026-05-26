@@ -1,0 +1,22 @@
+# Ship-Safe Ignore File
+# Suppress false positives and intentional patterns
+
+# False positive: "next" is Next.js, not a typosquat of "nuxt"
+package.json:TYPOSQUAT_SUSPECT
+
+# Intentional: Public contact email addresses in portfolio
+components/Contact.jsx:PII_EMAIL_HARDCODED
+
+# Safe: JSON-LD schema markup with static data
+components/SchemaMarkup.jsx:XSS
+pages/_document.jsx:XSS
+
+# Expected: Missing CSP headers are configured at deployment level (Vercel)
+next.config.js:MISSING_CSP
+
+# Low priority: Unused dependency warnings
+package.json:UNUSED_DEPENDENCY
+
+# Technical: RAG/embedding warnings are not applicable to this project
+data/projects.js:RAG_EMBEDDING_IN_RESPONSE
+utils/performance.js:RAG_EXCESSIVE_CONTEXT

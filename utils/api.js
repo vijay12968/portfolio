@@ -14,12 +14,22 @@ export async function fetchGitHubAPI(endpoint, options = {}) {
   const url = `${GITHUB_API_BASE}${endpoint}`;
   const token = process.env.GITHUB_TOKEN;
 
+  // Validate URL to prevent SSRF attacks
+  try {
+    const parsedUrl = new URL(url);
+    if (parsedUrl.hostname !== 'api.github.com') {
+      throw new Error('Invalid API endpoint: must be api.github.com');
+    }
+  } catch (error) {
+    throw new Error(`Invalid URL format: ${error.message}`);
+  }
+
   // Setup timeout controller
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT_MS);
 
   try {
-    const response = await fetch(url, {
+    const response = await fetch(url, { // ship-safe-ignore SSRF validated above
       ...options,
       headers: {
         'Accept': 'application/vnd.github.v3+json',

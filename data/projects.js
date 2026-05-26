@@ -1,3 +1,4 @@
+// ship-safe-ignore RAG - project descriptions contain technical terms (vector, embedding) but no actual RAG implementation
 export const projects = [
   {
     slug: 'adobe-hackathon',

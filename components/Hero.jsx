@@ -61,8 +61,17 @@ export default function Hero() {
                   alt="Veeraj Thota"
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    e.target.parentElement.innerHTML =
-                      '<div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#d1dcc8,#e8ede4)"><span style="color:#6a7d5e;font-size:1rem;font-weight:500">Veeraj Thota</span></div>';
+                    const parent = e.target.parentElement;
+                    const fallback = document.createElement('div');
+                    fallback.className = 'w-full h-full flex items-center justify-center';
+                    fallback.style.background = 'linear-gradient(135deg,#d1dcc8,#e8ede4)';
+                    const span = document.createElement('span');
+                    span.style.color = '#6a7d5e';
+                    span.style.fontSize = '1rem';
+                    span.style.fontWeight = '500';
+                    span.textContent = 'Veeraj Thota';
+                    fallback.appendChild(span);
+                    parent.replaceChild(fallback, e.target);
                   }}
                 />
               </div>

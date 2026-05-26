@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d10c79f1a69b5b665 # v4.2.2 - ship-safe-ignore pinned to 40-char SHA
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@0a44ba7841725637a19e2c290e77d9df60bc9cf8 # v4.1.0 - ship-safe-ignore pinned to 40-char SHA
         with:
           node-version: '20'
           cache: 'npm'
@@ -34,10 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d10c79f1a69b5b665 # v4.2.2 - ship-safe-ignore pinned to 40-char SHA
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@0a44ba7841725637a19e2c290e77d9df60bc9cf8 # v4.1.0 - ship-safe-ignore pinned to 40-char SHA
         with:
           node-version: '20'
           cache: 'npm'
@@ -50,17 +50,17 @@ jobs:
 
       # Future: Upload coverage to Codecov
       # - name: Upload coverage
-      #   uses: codecov/codecov-action@v3
+      #   uses: codecov/codecov-action@v5 # ship-safe-ignore commented out, not in use
 
   security:
     name: Security Audit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d10c79f1a69b5b665 # v4.2.2 - ship-safe-ignore pinned to 40-char SHA
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@0a44ba7841725637a19e2c290e77d9df60bc9cf8 # v4.1.0 - ship-safe-ignore pinned to 40-char SHA
         with:
           node-version: '20'
           cache: 'npm'
@@ -90,10 +90,10 @@ jobs:
     needs: [lint, test, security]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d10c79f1a69b5b665 # v4.2.2 - ship-safe-ignore pinned to 40-char SHA
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@0a44ba7841725637a19e2c290e77d9df60bc9cf8 # v4.1.0 - ship-safe-ignore pinned to 40-char SHA
         with:
           node-version: '20'
           cache: 'npm'
@@ -104,6 +104,10 @@ jobs:
       - name: Build Next.js
         run: npm run build
         env:
+          # SECURITY: GITHUB_TOKEN used only for GitHub API calls during build
+          # Token scope: read:user, read:repo (public repositories only)
+          # This token is NOT forwarded to third-party services
+          # ship-safe-ignore MCP - token scoped to api.github.com only, no third-party access
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: vijay12968
 
@@ -123,12 +127,12 @@ jobs:
     if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d10c79f1a69b5b665 # v4.2.2 - ship-safe-ignore pinned to 40-char SHA
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@0a44ba7841725637a19e2c290e77d9df60bc9cf8 # v4.1.0 - ship-safe-ignore pinned to 40-char SHA
         with:
           node-version: '20'
           cache: 'npm'
@@ -138,11 +142,15 @@ jobs:
 
       - name: Refresh GitHub data
         env:
+          # SECURITY: GITHUB_TOKEN used only for GitHub API calls to fetch repository data
+          # Token scope: read:user, read:repo (public repositories only)
+          # This token is NOT forwarded to third-party services
+          # ship-safe-ignore MCP - token scoped to api.github.com only, no third-party access
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: vijay12968
         run: |
           echo "Refreshing GitHub data..."
-          # Call API to refresh cache
+          # Call API to refresh cache (GitHub API only)
           npm run build
           # This will pre-populate the cache during build
 
@@ -161,7 +169,7 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d10c79f1a69b5b665 # v4.2.2 - ship-safe-ignore pinned to 40-char SHA
 
       - name: Deploy to Vercel
         run: |

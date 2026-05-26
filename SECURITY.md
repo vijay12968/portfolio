@@ -473,7 +473,7 @@ This project has **never used Upstash Redis**. The scanner likely detected a pat
 ```bash
 # Historical commit showed placeholder pattern
 $ git show 37fc4ee562:.env.example
-# Result: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (all x's - placeholder pattern)
+# Result: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (all x's - placeholder pattern) # ship-safe-ignore example in docs
 
 # Current .env.example uses safer placeholders
 $ cat .env.example
