@@ -66,19 +66,6 @@ export default function SiteNavigation() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href="/resumes/Veeraj_1.pdf"
-            download
-            className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded transition-colors duration-200"
-            style={{ border: '1px solid var(--color-border)', color: 'var(--color-text)', textDecoration: 'none', background: 'var(--color-bg-card)' }}
-            onMouseEnter={e => { e.currentTarget.style.background = 'var(--color-bg-subtle)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = 'var(--color-bg-card)'; }}
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Resume
-          </a>
           <ThemeToggle />
         </div>
 
@@ -119,14 +106,6 @@ export default function SiteNavigation() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="/resumes/Veeraj_1.pdf"
-            download
-            className="block mt-3 text-center text-sm font-medium py-2.5 rounded"
-            style={{ border: '1px solid var(--color-border)', color: 'var(--color-text)', textDecoration: 'none' }}
-          >
-            Download Resume
-          </a>
         </div>
       )}
     </nav>
