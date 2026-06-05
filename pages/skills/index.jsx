@@ -22,7 +22,6 @@ const skillCategories = [
       { name: 'Scikit-Learn', level: 'Basic, progressing to Intermediate', projects: ['Airline Fare Prediction'] },
       { name: 'TensorFlow', level: 'Basic, progressing to Intermediate', projects: ['Coursework and personal projects'] },
       { name: 'FAISS', level: 'Basic, progressing to Intermediate', projects: ['Adobe Hackathon'] },
-      { name: 'Apache Spark', level: 'Basic, progressing to Intermediate', projects: ['Self-study, active learning'] },
     ],
   },
   {
@@ -135,7 +134,7 @@ export default function SkillsPage() {
             {[
               { value: '3 years', label: 'Programming Experience' },
               { value: '6', label: 'Skill Categories' },
-              { value: '25', label: 'Technologies' },
+              { value: '24', label: 'Technologies' },
             ].map((stat, i) => (
               <div key={i}>
                 <p className="text-2xl font-bold" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>{stat.value}</p>

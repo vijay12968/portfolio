@@ -18,7 +18,6 @@ const SkillsGrid = () => {
         { name: "Scikit-Learn", level: "Basic, progressing to Intermediate" },
         { name: "TensorFlow", level: "Basic, progressing to Intermediate" },
         { name: "FAISS", level: "Basic, progressing to Intermediate" },
-        { name: "Apache Spark", level: "Basic, progressing to Intermediate" },
       ],
     },
     {
@@ -127,7 +126,7 @@ const SkillsGrid = () => {
             </div>
             <div>
               <p className="text-2xl font-bold" style={{ color: "#1F2937", letterSpacing: "-0.02em" }}>
-                25
+                24
               </p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#6B7280" }}>
                 Technologies

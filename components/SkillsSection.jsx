@@ -20,7 +20,6 @@ const SkillsSection = () => {
         { name: "Scikit-Learn", level: "Advanced" },
         { name: "TensorFlow", level: "Intermediate" },
         { name: "FAISS", level: "Advanced" },
-        { name: "Apache Spark", level: "Intermediate" },
       ],
     },
     {
