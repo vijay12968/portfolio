@@ -58,7 +58,6 @@ const SkillsSection = () => {
       icon: "🤖",
       skills: [
         { name: "Claude API", level: "Advanced" },
-        { name: "RAG Systems", level: "Advanced" },
         { name: "NLP", level: "Intermediate" },
         { name: "LLM Prompting", level: "Advanced" },
       ],

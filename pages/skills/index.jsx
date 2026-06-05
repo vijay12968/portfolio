@@ -60,7 +60,6 @@ const skillCategories = [
     label: 'AI and LLM Integration',
     skills: [
       { name: 'Claude API', level: 'In Progress', projects: ['Active learning'] },
-      { name: 'RAG Systems', level: 'In Progress', projects: ['Adobe Hackathon (partial)', 'Self-study'] },
       { name: 'NLP', level: 'In Progress', projects: ['Adobe Hackathon', 'Self-study'] },
       { name: 'LLM Prompting', level: 'In Progress', projects: ['Active learning'] },
     ],
@@ -136,7 +135,7 @@ export default function SkillsPage() {
             {[
               { value: '3 years', label: 'Programming Experience' },
               { value: '6', label: 'Skill Categories' },
-              { value: '26', label: 'Technologies' },
+              { value: '25', label: 'Technologies' },
             ].map((stat, i) => (
               <div key={i}>
                 <p className="text-2xl font-bold" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>{stat.value}</p>

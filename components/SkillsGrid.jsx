@@ -52,7 +52,6 @@ const SkillsGrid = () => {
       category: "AI and LLM Integration",
       skills: [
         { name: "Claude API", level: "In Progress" },
-        { name: "RAG Systems", level: "In Progress" },
         { name: "NLP", level: "In Progress" },
         { name: "LLM Prompting", level: "In Progress" },
       ],
@@ -128,7 +127,7 @@ const SkillsGrid = () => {
             </div>
             <div>
               <p className="text-2xl font-bold" style={{ color: "#1F2937", letterSpacing: "-0.02em" }}>
-                26
+                25
               </p>
               <p className="text-xs uppercase tracking-widest mt-2" style={{ color: "#6B7280" }}>
                 Technologies
