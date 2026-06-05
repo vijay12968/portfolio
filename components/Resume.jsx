@@ -16,28 +16,20 @@ function useInView(threshold = 0.1) {
 
 const resumes = [
   {
-    id: 'v1',
-    title: 'Technical-Focused',
-    subtitle: 'Engineering & Projects',
-    description: 'Emphasizes technical depth — data pipelines, ML projects, and engineering achievements.',
-    file: '/resumes/Veeraj_1.pdf',
-    highlights: ['Data Engineering', 'ML Projects', 'Technical Skills'],
+    id: 'sde',
+    title: 'SDE Resume',
+    subtitle: 'Software Development Engineer',
+    description: 'Tailored for software development roles with focus on engineering skills, technical projects, and full-stack experience.',
+    file: '/resumes/SDE_resume_for_portfolio.pdf',
+    highlights: ['Full-Stack Dev', 'System Design', 'Technical Skills'],
   },
   {
-    id: 'v2',
-    title: 'Comprehensive',
-    subtitle: 'Full Professional Overview',
-    description: 'Complete overview including leadership, extracurriculars, and soft-skill achievements.',
-    file: '/resumes/Veeraj_2.pdf',
-    highlights: ['Leadership', 'Certifications', 'Full Overview'],
-  },
-  {
-    id: 'v3',
-    title: 'Latest Version',
-    subtitle: 'Updated Resume',
-    description: 'Most recent resume with latest projects, skills, and achievements. Recommended for all applications.',
-    file: '/resumes/Veeraj_3.pdf',
-    highlights: ['Latest Updates', 'Current Projects', 'Recent Skills'],
+    id: 'python',
+    title: 'Python Resume',
+    subtitle: 'Python Development & Data',
+    description: 'Emphasizes Python expertise, data analysis, backend development, and AI/ML integration capabilities.',
+    file: '/resumes/python_resume_for_portfolio.pdf',
+    highlights: ['Python Expert', 'Data Analysis', 'AI/ML Integration'],
   },
 ];
 
@@ -154,11 +146,11 @@ export default function Resume() {
           <span className="section-label">Documents</span>
           <h2 className="section-heading mt-2">My Resumes</h2>
           <p className="mt-3 max-w-md mx-auto" style={{ color: 'var(--text-secondary)' }}>
-            Three versions tailored to different opportunities. Choose the format that best fits your needs.
+            Two versions tailored to different opportunities. Choose the format that best fits your needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {resumes.map((r, i) => (
             <ResumeCard key={r.id} resume={r} index={i} inView={inView} />
           ))}
