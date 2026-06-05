@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { href: '/about',      label: 'About' },
@@ -65,12 +64,7 @@ export default function SiteNavigation() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
-          <ThemeToggle />
-        </div>
-
-        <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle />
+        <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 cursor-pointer"

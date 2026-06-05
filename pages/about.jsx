@@ -8,7 +8,7 @@ export default function About() {
     <PageLayout breadcrumbs={[{ label: 'About' }]}>
       <Head>
         <title>About — Veeraj Thota</title>
-        <meta name="description" content="B.Tech CSE student at GRIET, Hyderabad. Focused on data engineering and FinTech." />
+        <meta name="description" content="Fourth-year CSE student at GRIET, Hyderabad. Working on website development, data analysis, backend, and AI/ML integration." />
       </Head>
 
       <div className="max-w-4xl mx-auto px-6 py-16">
@@ -18,10 +18,10 @@ export default function About() {
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: 'var(--color-text-muted)' }}>Introduction</p>
           <h1 className="text-4xl font-bold mb-6" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em' }}>Who I Am</h1>
           <p className="text-lg leading-relaxed mb-6" style={{ color: 'var(--color-text-secondary)', maxWidth: '640px' }}>
-            I am a 3rd-year B.Tech Computer Science student at GRIET, Hyderabad. My focus is on data engineering and FinTech — building systems that move, transform, and extract value from data.
+            I am a fourth-year B.Tech Computer Science student at GRIET, Hyderabad, engaged in the CSE department. I work on website development, data analysis, backend systems, and AI/ML integration in projects.
           </p>
           <p className="leading-relaxed mb-6" style={{ color: 'var(--color-text-muted)', maxWidth: '640px' }}>
-            I work across the full data stack: pipeline architecture, machine learning, analytics, and full-stack development. My goal is to intern at a FinTech company in a data role, gain production experience, and build toward a leadership position at the intersection of data and finance.
+            My focus is on building practical solutions across the full stack — from data pipelines and analytics to web applications and machine learning integration. I'm working toward opportunities that leverage this diverse skill set.
           </p>
           <div className="flex flex-wrap gap-4 mt-8">
             <Link href="/about/career-journey" className="text-sm font-medium px-4 py-2 rounded" style={{ background: 'var(--color-btn-bg)', color: '#fff', textDecoration: 'none' }}>

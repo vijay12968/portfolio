@@ -27,9 +27,6 @@ export default function Document() {
     .replace(/</g, '\\u003c')
     .replace(/>/g, '\\u003e');
 
-  // Safe theme script: static code with no user input
-  const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){console.error('Theme init error:',e)}})()`;
-
   return (
     <Html lang="en">
       <Head>
@@ -55,9 +52,6 @@ export default function Document() {
         />
       </Head>
       <body>
-        {/* eslint-disable-next-line react/no-danger */}
-        {/* SAFE: Static theme initialization script, no user input */}
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} /> {/* ship-safe-ignore XSS static script */}
         <Main />
         <NextScript />
       </body>

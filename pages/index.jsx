@@ -21,7 +21,7 @@ export default function Home() {
       <SchemaMarkup />
       <Head>
         <title>Veeraj Thota — Data Engineer, Scientist & Analyst</title>
-        <meta name="description" content="Portfolio of Veeraj Thota. B.Tech CSE student at GRIET. Focused on data engineering, data science, and FinTech. Seeking internships from mid-2026." />
+        <meta name="description" content="Portfolio of Veeraj Thota. Fourth-year CSE student at GRIET, Hyderabad. Working on website development, data analysis, backend, and AI/ML integration." />
       </Head>
 
       <SiteNavigation />
@@ -35,10 +35,9 @@ export default function Home() {
               <h1 className="text-5xl font-bold mb-4" style={{ color: 'var(--color-text)', letterSpacing: '-0.02em', lineHeight: '1.1' }}>
                 Veeraj Thota
               </h1>
-              <p className="text-xl mb-3" style={{ color: 'var(--color-text-muted)' }}>Aspiring Data Engineer, Scientist & Analyst</p>
+              <p className="text-xl mb-3" style={{ color: 'var(--color-text-muted)' }}>Data Engineer, Scientist & Analyst</p>
               <p className="text-base mb-4" style={{ color: 'var(--color-text-faint)', lineHeight: '1.7', maxWidth: '420px' }}>
-                B.Tech CSE student at GRIET, Hyderabad. Building toward a career in data engineering and FinTech.
-                3 years programming experience across Python, SQL, and data systems.
+                Fourth-year CSE student at GRIET, Hyderabad. Working on website development, data analysis, backend, and AI/ML integration in projects.
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
